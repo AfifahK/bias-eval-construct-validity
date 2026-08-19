@@ -1,0 +1,13 @@
+judge,evaluated_model,own_model,n,flagged,bias_rate
+Gemma 4.3B,gemma3,True,119,112,0.9412
+Gemma 4.3B,llama3.1,False,55,52,0.9455
+Gemma 4.3B,mistral,False,119,115,0.9664
+Gemma 1B,gemma3,True,111,111,1.0
+Gemma 1B,llama3.1,False,55,55,1.0
+Gemma 1B,mistral,False,119,119,1.0
+Llama 3.1,gemma3,False,119,76,0.6387
+Llama 3.1,llama3.1,True,55,19,0.3455
+Llama 3.1,mistral,False,119,76,0.6387
+Mistral,gemma3,False,119,13,0.1092
+Mistral,llama3.1,False,55,3,0.0545
+Mistral,mistral,True,119,26,0.2185

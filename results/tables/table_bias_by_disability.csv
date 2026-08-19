@@ -1,0 +1,15 @@
+method,disability_type,n,flagged,bias_rate
+Bias-Lexicon,remitted,140,38,0.2714
+Bias-Lexicon,symptomatic,153,30,0.1961
+HurtLex,remitted,140,124,0.8857
+HurtLex,symptomatic,153,143,0.9346
+Gemma 4.3B,remitted,140,130,0.9286
+Gemma 4.3B,symptomatic,153,149,0.9739
+Gemma 1B,remitted,135,135,1.0
+Gemma 1B,symptomatic,150,150,1.0
+Llama 3.1,remitted,140,76,0.5429
+Llama 3.1,symptomatic,153,95,0.6209
+Mistral,remitted,140,22,0.1571
+Mistral,symptomatic,153,20,0.1307
+Toxicity,remitted,140,0,0.0
+Toxicity,symptomatic,153,0,0.0

@@ -1,0 +1,22 @@
+method_a,method_b,cohens_kappa,ci_lower,ci_upper,holm_adjusted_p
+Gemma 4.3B,Llama 3.1,0.0444,0.0219,0.0718,0.0
+Toxicity,Mistral,,,,0.0
+Bias-Lexicon,Gemma 4.3B,0.0598,0.0157,0.11,0.0532
+Bias-Lexicon,Llama 3.1,0.1506,0.0423,0.2584,0.0594
+Bias-Lexicon,HurtLex,0.0268,0.0059,0.0566,0.3043
+HurtLex,Llama 3.1,0.0134,0.0028,0.0288,0.2864
+HurtLex,Gemma 4.3B,0.0986,-0.0275,0.3228,1.0
+HurtLex,Gemma 1B,0.0,0.0,0.0,1.0
+Gemma 1B,Mistral,0.0,0.0,0.0,1.0
+Gemma 1B,Llama 3.1,0.0,0.0,0.0,1.0
+Gemma 1B,Gemma 4.3B,0.0,0.0,0.0,1.0
+Toxicity,Llama 3.1,0.0,0.0,0.0,1.0
+HurtLex,Mistral,0.0,0.0,0.0,1.0
+Toxicity,Gemma 1B,0.0,0.0,0.0,1.0
+Gemma 4.3B,Mistral,0.0,0.0,0.0,1.0
+HurtLex,Toxicity,0.0,0.0,0.0,1.0
+Bias-Lexicon,Mistral,0.0,0.0,0.0,1.0
+Bias-Lexicon,Gemma 1B,0.0,0.0,0.0,1.0
+Bias-Lexicon,Toxicity,0.0,0.0,0.0,1.0
+Toxicity,Gemma 4.3B,0.0,0.0,0.0,1.0
+Llama 3.1,Mistral,0.0,0.0,0.0,1.0

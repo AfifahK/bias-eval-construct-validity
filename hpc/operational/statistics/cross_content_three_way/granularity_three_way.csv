@@ -1,0 +1,7 @@
+method,dataset,sentence_rate,response_rate,inflation
+Bias-Lexicon,intersectional,0.054,0.1944,3.6005
+Bias-Lexicon,multiwoz,0.001268,0.016712,13.1798
+HurtLex,multiwoz,0.411714,0.968472,2.3523
+Bias-Lexicon,operational,0.0581,0.4913,8.4568
+HurtLex,operational,0.2899,0.9862,3.4016
+Toxicity,operational,0.0,0.0,

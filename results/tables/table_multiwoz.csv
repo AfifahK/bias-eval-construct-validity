@@ -1,0 +1,5 @@
+method,n_dialogues,n_turns,flagged,bias_rate
+Bias-Lexicon (turn),8437,113552,144,0.001268
+HurtLex (turn),8437,113552,46751,0.411714
+Bias-Lexicon (dialogue),8437,113552,141,0.016712
+HurtLex (dialogue),8437,113552,8171,0.968472

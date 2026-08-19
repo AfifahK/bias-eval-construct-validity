@@ -1,0 +1,5 @@
+dataset,method,n,flagged,bias_rate
+Intersectional,Bias-Lexicon,293,68,0.2321
+Intersectional,HurtLex,293,267,0.9113
+MultiWOZ,Bias-Lexicon,113552,144,0.001268
+MultiWOZ,HurtLex,113552,46751,0.411714

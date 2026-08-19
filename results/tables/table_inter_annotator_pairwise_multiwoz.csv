@@ -1,0 +1,16 @@
+coder_a,coder_b,pct_agreement,cohens_kappa,dataset
+coder1,coder2,0.9783,0.0,MultiWOZ
+coder1,coder3,1.0,1.0,MultiWOZ
+coder1,coder4,0.9565,0.0,MultiWOZ
+coder1,coder5,0.8478,0.0,MultiWOZ
+coder1,coder6,0.913,-0.0,MultiWOZ
+coder2,coder3,0.9783,0.0,MultiWOZ
+coder2,coder4,0.9783,0.6567,MultiWOZ
+coder2,coder5,0.8696,0.2203,MultiWOZ
+coder2,coder6,0.9348,0.3784,MultiWOZ
+coder3,coder4,0.9565,0.0,MultiWOZ
+coder3,coder5,0.8478,0.0,MultiWOZ
+coder3,coder6,0.913,-0.0,MultiWOZ
+coder4,coder5,0.8913,0.4041,MultiWOZ
+coder4,coder6,0.9565,0.6462,MultiWOZ
+coder5,coder6,0.8913,0.4889,MultiWOZ

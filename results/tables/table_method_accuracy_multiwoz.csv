@@ -1,0 +1,6 @@
+method,n,accuracy,sensitivity,specificity,false_positive_rate
+Bias-Lexicon,46,0.9783,0.0,1.0,0.0
+HurtLex,46,0.5217,1.0,0.5111,0.4889
+Gemma 4.3B,46,0.5435,1.0,0.5333,0.4667
+Llama 3.1,46,0.7609,0.0,0.7778,0.2222
+Mistral,46,0.9783,0.0,1.0,0.0

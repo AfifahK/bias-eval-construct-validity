@@ -1,0 +1,85 @@
+method_a,method_b,cell,count
+Bias-Lexicon,HurtLex,TP,62
+Bias-Lexicon,HurtLex,FP,205
+Bias-Lexicon,HurtLex,FN,6
+Bias-Lexicon,HurtLex,TN,20
+Bias-Lexicon,Gemma 4.3B,TP,63
+Bias-Lexicon,Gemma 4.3B,FP,216
+Bias-Lexicon,Gemma 4.3B,FN,5
+Bias-Lexicon,Gemma 4.3B,TN,9
+Bias-Lexicon,Gemma 1B,TP,64
+Bias-Lexicon,Gemma 1B,FP,221
+Bias-Lexicon,Gemma 1B,FN,0
+Bias-Lexicon,Gemma 1B,TN,0
+Bias-Lexicon,Llama 3.1,TP,47
+Bias-Lexicon,Llama 3.1,FP,124
+Bias-Lexicon,Llama 3.1,FN,21
+Bias-Lexicon,Llama 3.1,TN,101
+Bias-Lexicon,Mistral,TP,9
+Bias-Lexicon,Mistral,FP,33
+Bias-Lexicon,Mistral,FN,59
+Bias-Lexicon,Mistral,TN,192
+Bias-Lexicon,Toxicity,TP,0
+Bias-Lexicon,Toxicity,FP,0
+Bias-Lexicon,Toxicity,FN,68
+Bias-Lexicon,Toxicity,TN,225
+HurtLex,Gemma 4.3B,TP,256
+HurtLex,Gemma 4.3B,FP,23
+HurtLex,Gemma 4.3B,FN,11
+HurtLex,Gemma 4.3B,TN,3
+HurtLex,Gemma 1B,TP,259
+HurtLex,Gemma 1B,FP,26
+HurtLex,Gemma 1B,FN,0
+HurtLex,Gemma 1B,TN,0
+HurtLex,Llama 3.1,TP,155
+HurtLex,Llama 3.1,FP,16
+HurtLex,Llama 3.1,FN,112
+HurtLex,Llama 3.1,TN,10
+HurtLex,Mistral,TP,34
+HurtLex,Mistral,FP,8
+HurtLex,Mistral,FN,233
+HurtLex,Mistral,TN,18
+HurtLex,Toxicity,TP,0
+HurtLex,Toxicity,FP,0
+HurtLex,Toxicity,FN,267
+HurtLex,Toxicity,TN,26
+Gemma 4.3B,Gemma 1B,TP,271
+Gemma 4.3B,Gemma 1B,FP,14
+Gemma 4.3B,Gemma 1B,FN,0
+Gemma 4.3B,Gemma 1B,TN,0
+Gemma 4.3B,Llama 3.1,TP,171
+Gemma 4.3B,Llama 3.1,FP,0
+Gemma 4.3B,Llama 3.1,FN,108
+Gemma 4.3B,Llama 3.1,TN,14
+Gemma 4.3B,Mistral,TP,42
+Gemma 4.3B,Mistral,FP,0
+Gemma 4.3B,Mistral,FN,237
+Gemma 4.3B,Mistral,TN,14
+Gemma 4.3B,Toxicity,TP,0
+Gemma 4.3B,Toxicity,FP,0
+Gemma 4.3B,Toxicity,FN,279
+Gemma 4.3B,Toxicity,TN,14
+Gemma 1B,Llama 3.1,TP,165
+Gemma 1B,Llama 3.1,FP,0
+Gemma 1B,Llama 3.1,FN,120
+Gemma 1B,Llama 3.1,TN,0
+Gemma 1B,Mistral,TP,41
+Gemma 1B,Mistral,FP,0
+Gemma 1B,Mistral,FN,244
+Gemma 1B,Mistral,TN,0
+Gemma 1B,Toxicity,TP,0
+Gemma 1B,Toxicity,FP,0
+Gemma 1B,Toxicity,FN,285
+Gemma 1B,Toxicity,TN,0
+Llama 3.1,Mistral,TP,42
+Llama 3.1,Mistral,FP,0
+Llama 3.1,Mistral,FN,129
+Llama 3.1,Mistral,TN,122
+Llama 3.1,Toxicity,TP,0
+Llama 3.1,Toxicity,FP,0
+Llama 3.1,Toxicity,FN,171
+Llama 3.1,Toxicity,TN,122
+Mistral,Toxicity,TP,0
+Mistral,Toxicity,FP,0
+Mistral,Toxicity,FN,42
+Mistral,Toxicity,TN,251

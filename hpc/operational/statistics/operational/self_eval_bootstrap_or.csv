@@ -1,0 +1,5 @@
+judge,n_own_flag,n_own_total,n_other_flag,n_other_total,or_haldane,ci_lower,ci_upper,p_fisher,n_resamples,seed
+Gemma 1B,240,240,336,336,0.7147,0.7147,0.7147,1.0,10000,99
+Gemma 4.3B,239,240,311,338,20.7492,5.7683,56.2619,5.2273e-06,10000,99
+Llama 3.1,6,98,171,480,0.1178,0.0347,0.2383,3e-10,10000,99
+Mistral,0,240,0,338,1.4075,1.4075,1.4075,1.0,10000,99

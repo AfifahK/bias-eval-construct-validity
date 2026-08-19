@@ -1,0 +1,4 @@
+judge,or_value,ci_lower_boot,ci_upper_boot,ci_lower_wald,ci_upper_wald,p_fisher
+gemma,0.7165,0.3373,1.5387,0.3472,1.4787,0.452694
+llama,0.3096,0.1953,0.4722,0.2004,0.4783,0.0
+mistral,2.6932,1.6978,4.461,1.6705,4.3418,5.6e-05

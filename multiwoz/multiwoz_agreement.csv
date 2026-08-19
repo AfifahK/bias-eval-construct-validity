@@ -1,0 +1,19 @@
+level,breakdown,group,n,agreement_rate,cohens_kappa,spearman_rho,spearman_p,TP,FP,FN,TN
+utterance/turn,overall,all,290,0.8586,0.0,,,0,41,0,249
+utterance/turn,speaker,system,145,0.7793,0.0,,,0,32,0,113
+utterance/turn,speaker,user,145,0.9379,0.0,,,0,9,0,136
+utterance/turn,domain,attraction,3,0.6667,0.0,,,0,1,0,2
+utterance/turn,domain,"attraction, bus, hospital, hotel, police, restaurant, taxi, train",145,0.9379,0.0,,,0,9,0,136
+utterance/turn,domain,"attraction, hotel",6,0.5,0.0,,,0,3,0,3
+utterance/turn,domain,"attraction, train",7,0.8571,0.0,,,0,1,0,6
+utterance/turn,domain,hotel,9,0.4444,0.0,,,0,5,0,4
+utterance/turn,domain,restaurant,11,0.8182,0.0,,,0,2,0,9
+utterance/turn,domain,"restaurant, attraction",19,0.7895,0.0,,,0,4,0,15
+utterance/turn,domain,"restaurant, hotel",11,0.8182,0.0,,,0,2,0,9
+utterance/turn,domain,"restaurant, taxi, hotel",10,0.8,0.0,,,0,2,0,8
+utterance/turn,domain,"restaurant, train",37,0.8919,0.0,,,0,4,0,33
+utterance/turn,domain,taxi,6,0.3333,0.0,,,0,4,0,2
+utterance/turn,domain,"taxi, attraction, hotel",6,0.6667,0.0,,,0,2,0,4
+utterance/turn,domain,train,9,0.8889,0.0,,,0,1,0,8
+utterance/turn,domain,"train, hotel",11,0.9091,0.0,,,0,1,0,10
+conversation,overall,all,20,0.15,0.0,,,0,17,0,3

@@ -1,0 +1,22 @@
+method_a,method_b,spearman_rho,p_value
+Bias-Lexicon,HurtLex,1.0,0.0
+Bias-Lexicon,Toxicity,1.0,0.0
+Bias-Lexicon,Gemma 1B,0.132,0.025376
+Bias-Lexicon,Gemma 4.3B,0.2277,9.4e-05
+Bias-Lexicon,Llama 3.1,0.1644,0.00507
+Bias-Lexicon,Mistral,0.0509,0.388261
+HurtLex,Toxicity,1.0,0.0
+HurtLex,Gemma 1B,0.132,0.025376
+HurtLex,Gemma 4.3B,0.2277,9.4e-05
+HurtLex,Llama 3.1,0.1644,0.00507
+HurtLex,Mistral,0.0509,0.388261
+Toxicity,Gemma 1B,0.132,0.025376
+Toxicity,Gemma 4.3B,0.2277,9.4e-05
+Toxicity,Llama 3.1,0.1644,0.00507
+Toxicity,Mistral,0.0509,0.388261
+Gemma 1B,Gemma 4.3B,0.06,0.311258
+Gemma 1B,Llama 3.1,0.0647,0.274366
+Gemma 1B,Mistral,-0.0254,0.668642
+Gemma 4.3B,Llama 3.1,0.4866,0.0
+Gemma 4.3B,Mistral,0.1357,0.020985
+Llama 3.1,Mistral,0.0745,0.206616

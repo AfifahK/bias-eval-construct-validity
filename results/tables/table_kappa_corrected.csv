@@ -1,0 +1,22 @@
+pair,kappa,p_raw,p_holm,sig_corrected
+Llama 3.1 vs Mistral,0.2133,0.0,0.0,True
+Gemma 4.3B vs Llama 3.1,0.1314,0.0,0.0,True
+HurtLex vs Mistral,-0.0368,0.0384,0.7296,False
+Bias-Lexicon vs Llama 3.1,0.0916,0.052,0.936,False
+HurtLex vs Gemma 4.3B,0.0937,0.2192,1.0,False
+Gemma 4.3B vs Mistral,0.0167,0.2416,1.0,False
+Bias-Lexicon vs Gemma 4.3B,-0.0161,0.4156,1.0,False
+HurtLex vs Llama 3.1,-0.0131,0.8924,1.0,False
+Bias-Lexicon vs Mistral,-0.0165,0.9284,1.0,False
+Bias-Lexicon vs HurtLex,0.0003,1.0,1.0,False
+Gemma 1B vs Toxicity,0.0,1.0,1.0,False
+Gemma 1B vs Mistral,0.0,1.0,1.0,False
+Gemma 1B vs Llama 3.1,0.0,1.0,1.0,False
+Gemma 4.3B vs Toxicity,0.0,1.0,1.0,False
+HurtLex vs Toxicity,0.0,1.0,1.0,False
+Llama 3.1 vs Toxicity,0.0,1.0,1.0,False
+HurtLex vs Gemma 1B,0.0,1.0,1.0,False
+Bias-Lexicon vs Toxicity,0.0,1.0,1.0,False
+Bias-Lexicon vs Gemma 1B,0.0,1.0,1.0,False
+Gemma 4.3B vs Gemma 1B,0.0,1.0,1.0,False
+Mistral vs Toxicity,0.0,1.0,1.0,False

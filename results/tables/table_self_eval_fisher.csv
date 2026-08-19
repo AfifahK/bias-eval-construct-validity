@@ -1,0 +1,4 @@
+judge,own_flagged,own_unflagged,other_flagged,other_unflagged,or_value,p_value,ci_lower_wald,ci_upper_wald
+gemma,223,15,332,16,0.7165,0.452694,0.3472,1.4787
+llama,38,72,300,176,0.3096,0.0,0.2004,0.4783
+mistral,51,187,32,316,2.6932,5.6e-05,1.6705,4.3418

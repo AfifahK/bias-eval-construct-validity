@@ -1,0 +1,16 @@
+coder_a,coder_b,pct_agreement,cohens_kappa,dataset
+coder1,coder2,0.2105,0.0206,intersectional
+coder1,coder3,0.6842,0.2919,intersectional
+coder1,coder4,0.5263,0.145,intersectional
+coder1,coder5,0.5,0.0672,intersectional
+coder1,coder6,0.4737,0.05,intersectional
+coder2,coder3,0.4737,0.0777,intersectional
+coder2,coder4,0.6316,0.1419,intersectional
+coder2,coder5,0.6053,0.1284,intersectional
+coder2,coder6,0.6316,0.1419,intersectional
+coder3,coder4,0.6842,0.3838,intersectional
+coder3,coder5,0.6053,0.2234,intersectional
+coder3,coder6,0.7368,0.4865,intersectional
+coder4,coder5,0.6579,0.3042,intersectional
+coder4,coder6,0.8421,0.6761,intersectional
+coder5,coder6,0.7105,0.4113,intersectional

@@ -1,0 +1,4 @@
+divergence_type,n,human_bias_rate,judge_accuracy,dict_accuracy
+judge_only,7,0.7143,0.7143,0.2857
+dict_only,2,0.0,1.0,0.0
+random_sample,29,0.2759,0.0,0.0

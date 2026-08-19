@@ -1,0 +1,4 @@
+model,AIC,note,LLF,LR_test_p
+main_effects,1464.8,from v1v2_ablation.py,,
+interaction_no_length,1457.2,,-717.6,
+interaction_with_length,1452.8,,-714.38,0.011076

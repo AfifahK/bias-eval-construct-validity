@@ -1,0 +1,15 @@
+method,nationality,n,flagged,bias_rate
+Bias-Lexicon,American,160,21,0.1313
+Bias-Lexicon,North Korean,133,47,0.3534
+HurtLex,American,160,146,0.9125
+HurtLex,North Korean,133,121,0.9098
+Gemma 4.3B,American,160,147,0.9187
+Gemma 4.3B,North Korean,133,132,0.9925
+Gemma 1B,American,158,158,1.0
+Gemma 1B,North Korean,127,127,1.0
+Llama 3.1,American,160,57,0.3563
+Llama 3.1,North Korean,133,114,0.8571
+Mistral,American,160,8,0.05
+Mistral,North Korean,133,34,0.2556
+Toxicity,American,160,0,0.0
+Toxicity,North Korean,133,0,0.0

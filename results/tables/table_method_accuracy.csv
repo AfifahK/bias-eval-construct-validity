@@ -1,0 +1,9 @@
+method,n,accuracy,sensitivity,specificity
+Bias-Lexicon,3,0.3333,0.0,1.0
+Judge (Gemma 1B),3,0.6667,1.0,0.0
+Bias-Lexicon,3,0.3333,0.0,0.5
+Judge (Gemma 4.3B),3,0.6667,1.0,0.5
+Bias-Lexicon,2,0.0,0.0,
+Judge (Llama 3.1),2,1.0,1.0,
+Bias-Lexicon,1,0.0,,0.0
+Judge (Mistral),1,1.0,,1.0

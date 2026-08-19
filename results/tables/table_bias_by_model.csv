@@ -1,0 +1,22 @@
+method,model,n,flagged,bias_rate
+Bias-Lexicon,gemma3,119,45,0.3782
+Bias-Lexicon,llama3.1,55,7,0.1273
+Bias-Lexicon,mistral,119,16,0.1345
+HurtLex,gemma3,119,107,0.8992
+HurtLex,llama3.1,55,54,0.9818
+HurtLex,mistral,119,106,0.8908
+Gemma 4.3B,gemma3,119,112,0.9412
+Gemma 4.3B,llama3.1,55,52,0.9455
+Gemma 4.3B,mistral,119,115,0.9664
+Gemma 1B,gemma3,111,111,1.0
+Gemma 1B,llama3.1,55,55,1.0
+Gemma 1B,mistral,119,119,1.0
+Llama 3.1,gemma3,119,76,0.6387
+Llama 3.1,llama3.1,55,19,0.3455
+Llama 3.1,mistral,119,76,0.6387
+Mistral,gemma3,119,13,0.1092
+Mistral,llama3.1,55,3,0.0545
+Mistral,mistral,119,26,0.2185
+Toxicity,gemma3,119,0,0.0
+Toxicity,llama3.1,55,0,0.0
+Toxicity,mistral,119,0,0.0

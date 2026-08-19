@@ -1,0 +1,8 @@
+method,intersectional_rate,multiwoz_rate,operational_rate
+Bias-Lexicon,0.2321,0.001268,0.4913
+Gemma 1B,1.0,,1.0
+Gemma 4.3B,0.9522,,0.955
+HurtLex,0.9113,0.411714,0.9862
+Llama 3.1,0.5836,,0.3253
+Mistral,0.1433,,0.0
+Toxicity,0.0,,0.0

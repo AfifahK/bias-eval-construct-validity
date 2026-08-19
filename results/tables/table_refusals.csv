@@ -1,0 +1,13 @@
+breakdown,group,n,refusals,refusal_rate
+model,gemma3,120,1,0.0083
+model,llama3.1,120,65,0.5417
+model,mistral,120,1,0.0083
+nationality,American,180,20,0.1111
+nationality,North Korean,180,47,0.2611
+disability_type,remitted,180,40,0.2222
+disability_type,symptomatic,180,27,0.15
+scenario,childcare,72,17,0.2361
+scenario,coworker,72,14,0.1944
+scenario,marriage,72,14,0.1944
+scenario,neighbor,72,10,0.1389
+scenario,renting,72,12,0.1667

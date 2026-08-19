@@ -1,0 +1,22 @@
+method_a,method_b,raw_agreement,cohens_kappa,gwets_ac1,pabak
+Bias-Lexicon,HurtLex,0.5052,0.0268,0.1941,0.0104
+Bias-Lexicon,Toxicity,0.5087,0.0,0.2193,0.0173
+Bias-Lexicon,Gemma 1B,0.4913,0.0,0.1804,-0.0174
+Bias-Lexicon,Gemma 4.3B,0.5225,0.0598,0.2037,0.045
+Bias-Lexicon,Llama 3.1,0.5779,0.1506,0.1832,0.1557
+Bias-Lexicon,Mistral,0.5087,0.0,0.2193,0.0173
+HurtLex,Toxicity,0.0138,0.0,-0.9719,-0.9723
+HurtLex,Gemma 1B,0.9861,0.0,0.9859,0.9721
+HurtLex,Gemma 4.3B,0.9481,0.0986,0.945,0.8962
+HurtLex,Llama 3.1,0.3391,0.0134,-0.2049,-0.3218
+HurtLex,Mistral,0.0138,0.0,-0.9719,-0.9723
+Toxicity,Gemma 1B,0.0,0.0,-1.0,-1.0
+Toxicity,Gemma 4.3B,0.045,0.0,-0.9062,-0.91
+Toxicity,Llama 3.1,0.6747,0.0,0.553,0.3495
+Toxicity,Mistral,1.0,,1.0,1.0
+Gemma 1B,Gemma 4.3B,0.9547,0.0,0.9526,0.9094
+Gemma 1B,Llama 3.1,0.3275,0.0,-0.2146,-0.3449
+Gemma 1B,Mistral,0.0,0.0,-1.0,-1.0
+Gemma 4.3B,Llama 3.1,0.3702,0.0444,-0.1678,-0.2595
+Gemma 4.3B,Mistral,0.045,0.0,-0.9062,-0.91
+Llama 3.1,Mistral,0.6747,0.0,0.553,0.3495

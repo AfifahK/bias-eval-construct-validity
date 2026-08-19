@@ -1,0 +1,21 @@
+term,match_count,hurtlex_category,fp_or_tp,one_line_rationale
+can,212,om,FP,"Common English word, not inherently biased"
+disorder,149,cds,FP,Clinical term used descriptively in mental health context
+don,85,qas,FP,"Contraction fragment (don't), not biased"
+political,75,pa,context,May reflect stereotyping in context of nationality
+people,47,cds,context,Context-dependent — often in generalizing statements
+family,45,cds,context,Context-dependent — can appear in stereotyping contexts
+different,27,om,context,Context-dependent — can mark othering language
+love,20,asm,context,Context-dependent — can appear in patronizing framing
+do,16,asm,context,"Common verb, likely FP"
+common,13,qas,context,Context-dependent
+caution,12,asm,TP,Likely genuine bias-related term
+factor,11,cds,TP,Likely genuine bias-related term
+severe,11,re,TP,Likely genuine bias-related term
+process,8,asm,FP,Neutral word about procedures/cognition
+degree,8,cds,TP,Likely genuine bias-related term
+abuses,8,re,TP,Likely genuine bias-related term
+properly,7,dmc,TP,Likely genuine bias-related term
+face,7,an,TP,Likely genuine bias-related term
+isolated,7,is,TP,Likely genuine bias-related term
+simulated,5,dmc,TP,Likely genuine bias-related term

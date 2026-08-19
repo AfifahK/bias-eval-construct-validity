@@ -1,0 +1,51 @@
+prompt_id,model,scale,divergence_type,judge,dict_label,judge_label
+47,mistral,flipped,judge_only,Llama 3.1,0,1
+49,mistral,regular,judge_only,Gemma 4.3B,0,1
+6,mistral,flipped,judge_only,Gemma 4.3B,0,1
+25,mistral,regular,judge_only,Gemma 1B,0,1
+38,llama3.1,regular,judge_only,Gemma 1B,0,1
+28,mistral,regular,judge_only,Gemma 1B,0,1
+56,llama3.1,regular,judge_only,Gemma 1B,0,1
+26,gemma3,flipped,judge_only,Llama 3.1,0,1
+52,gemma3,flipped,dict_only,Mistral,1,0
+4,gemma3,flipped,dict_only,Gemma 4.3B,1,0
+47,gemma3,regular,judge_only,Gemma 1B,0,1
+60,mistral,regular,judge_only,Gemma 1B,0,1
+3,gemma3,flipped,random_sample,,-1,-1
+30,llama3.1,flipped,random_sample,,-1,-1
+4,mistral,regular,random_sample,,-1,-1
+44,gemma3,flipped,random_sample,,-1,-1
+29,llama3.1,regular,random_sample,,-1,-1
+44,mistral,flipped,random_sample,,-1,-1
+23,gemma3,flipped,random_sample,,-1,-1
+35,mistral,flipped,random_sample,,-1,-1
+58,llama3.1,regular,random_sample,,-1,-1
+18,mistral,flipped,random_sample,,-1,-1
+17,mistral,regular,random_sample,,-1,-1
+30,mistral,regular,random_sample,,-1,-1
+54,mistral,flipped,random_sample,,-1,-1
+60,gemma3,regular,random_sample,,-1,-1
+46,gemma3,flipped,random_sample,,-1,-1
+9,llama3.1,flipped,random_sample,,-1,-1
+4,gemma3,regular,random_sample,,-1,-1
+18,gemma3,flipped,random_sample,,-1,-1
+3,mistral,flipped,random_sample,,-1,-1
+57,mistral,flipped,random_sample,,-1,-1
+40,gemma3,regular,random_sample,,-1,-1
+41,mistral,regular,random_sample,,-1,-1
+48,mistral,flipped,random_sample,,-1,-1
+5,mistral,regular,random_sample,,-1,-1
+49,gemma3,regular,random_sample,,-1,-1
+10,llama3.1,regular,random_sample,,-1,-1
+1,gemma3,regular,random_sample,,-1,-1
+34,gemma3,regular,random_sample,,-1,-1
+4,llama3.1,regular,random_sample,,-1,-1
+34,gemma3,flipped,random_sample,,-1,-1
+8,gemma3,regular,random_sample,,-1,-1
+45,gemma3,regular,random_sample,,-1,-1
+50,mistral,flipped,random_sample,,-1,-1
+14,mistral,flipped,random_sample,,-1,-1
+8,mistral,regular,random_sample,,-1,-1
+31,gemma3,regular,random_sample,,-1,-1
+3,mistral,regular,random_sample,,-1,-1
+40,mistral,regular,random_sample,,-1,-1

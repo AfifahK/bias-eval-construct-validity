@@ -1,0 +1,38 @@
+level,breakdown,group,n,agreement_rate,cohens_kappa,spearman_rho,spearman_p,TP,FP,FN,TN
+sentence,overall,all,1647,0.2186,0.0102,0.123,1e-06,80,1278,9,280
+sentence,model,gemma3,792,0.2323,0.0148,0.1692,2e-06,57,602,6,127
+sentence,model,llama3.1,341,0.3666,0.0107,0.0505,0.352775,7,214,2,118
+sentence,model,mistral,514,0.0992,0.0008,0.0489,0.268296,16,462,1,35
+sentence,nationality,American,799,0.1865,0.0025,0.0156,0.659312,20,647,3,129
+sentence,nationality,North Korean,848,0.2488,0.0192,0.1561,5e-06,60,631,6,151
+sentence,disability_type,remitted,805,0.2161,0.0063,0.0957,0.006599,40,625,6,134
+sentence,disability_type,symptomatic,842,0.2209,0.0139,0.1506,1.1e-05,40,653,3,146
+sentence,scenario,childcare,261,0.1954,0.0103,0.1419,0.02182,13,209,1,38
+sentence,scenario,coworker,313,0.2236,0.0161,0.1602,0.004503,16,242,1,54
+sentence,scenario,marriage,376,0.242,0.0122,0.1948,0.000145,12,284,1,79
+sentence,scenario,neighbor,331,0.2266,-0.0054,0.0613,0.265908,26,250,6,49
+sentence,scenario,renting,366,0.1995,0.0143,0.1087,0.037626,13,293,0,60
+utterance/turn,overall,all,293,0.2457,-0.0161,0.0879,0.13312,63,216,5,9
+utterance/turn,model,gemma3,119,0.3697,-0.0374,0.1495,0.104712,41,71,4,3
+utterance/turn,model,llama3.1,55,0.1818,0.0167,-0.0159,0.907991,7,45,0,3
+utterance/turn,model,mistral,119,0.1513,-0.0092,0.0413,0.655534,15,100,1,3
+utterance/turn,nationality,American,160,0.1625,-0.0354,-0.0983,0.216159,17,130,4,9
+utterance/turn,nationality,North Korean,133,0.3459,-0.0151,0.0346,0.692748,46,86,1,0
+utterance/turn,disability_type,remitted,140,0.2714,-0.0469,0.1081,0.203528,33,97,5,5
+utterance/turn,disability_type,symptomatic,153,0.2222,0.013,0.0833,0.306048,30,119,0,4
+utterance/turn,scenario,childcare,55,0.1818,0.0,0.2623,0.053071,10,45,0,0
+utterance/turn,scenario,coworker,58,0.1724,-0.0634,0.1087,0.416637,9,46,2,1
+utterance/turn,scenario,marriage,58,0.2069,0.0198,0.3667,0.004633,9,46,0,3
+utterance/turn,scenario,neighbor,62,0.4516,0.0028,0.0706,0.585431,24,31,3,4
+utterance/turn,scenario,renting,60,0.2,0.0076,-0.0354,0.78825,11,48,0,1
+conversation,overall,all,293,0.2457,-0.0161,0.0879,0.13312,63,216,5,9
+conversation,model,gemma3,119,0.3697,-0.0374,0.1495,0.104712,41,71,4,3
+conversation,model,llama3.1,55,0.1818,0.0167,-0.0159,0.907991,7,45,0,3
+conversation,model,mistral,119,0.1513,-0.0092,0.0413,0.655534,15,100,1,3
+conversation,nationality,American,160,0.1625,-0.0354,-0.0983,0.216159,17,130,4,9
+conversation,nationality,North Korean,133,0.3459,-0.0151,0.0346,0.692748,46,86,1,0
+conversation,scenario,childcare,55,0.1818,0.0,0.2623,0.053071,10,45,0,0
+conversation,scenario,coworker,58,0.1724,-0.0634,0.1087,0.416637,9,46,2,1
+conversation,scenario,marriage,58,0.2069,0.0198,0.3667,0.004633,9,46,0,3
+conversation,scenario,neighbor,62,0.4516,0.0028,0.0706,0.585431,24,31,3,4
+conversation,scenario,renting,60,0.2,0.0076,-0.0354,0.78825,11,48,0,1

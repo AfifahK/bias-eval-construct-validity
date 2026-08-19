@@ -1,0 +1,22 @@
+method_a,method_b,ac1_intersectional,ac1_multiwoz,ac1_operational
+Bias-Lexicon,Gemma 1B,,,0.1804
+Bias-Lexicon,Gemma 4.3B,,,0.2037
+Bias-Lexicon,HurtLex,,,0.1941
+Bias-Lexicon,Llama 3.1,,,0.1832
+Bias-Lexicon,Mistral,,,0.2193
+Bias-Lexicon,Toxicity,,,0.2193
+Gemma 1B,Gemma 4.3B,,,0.9526
+Gemma 1B,Llama 3.1,,,-0.2146
+Gemma 1B,Mistral,,,-1.0
+Gemma 4.3B,Llama 3.1,0.4272,0.8378,-0.1678
+Gemma 4.3B,Mistral,-0.6031,0.8167,-0.9062
+HurtLex,Gemma 1B,,,0.9859
+HurtLex,Gemma 4.3B,,,0.945
+HurtLex,Llama 3.1,,,-0.2049
+HurtLex,Mistral,,,-0.9719
+HurtLex,Toxicity,,,-0.9719
+Llama 3.1,Mistral,0.1805,0.9371,0.553
+Toxicity,Gemma 1B,,,-1.0
+Toxicity,Gemma 4.3B,,,-0.9062
+Toxicity,Llama 3.1,,,0.553
+Toxicity,Mistral,,,1.0
