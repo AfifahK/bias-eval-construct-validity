@@ -3,48 +3,12 @@ import numpy as np
 from sklearn.metrics import cohen_kappa_score, confusion_matrix
 from scipy.stats import spearmanr
 
-# --- Load all score files ---
-print("Loading score files...")
-dict_sent = pd.read_csv("../../scores/dict_sentence_scores.csv")
-judge_sent = pd.read_csv("../../scores/llm_judge_sentence_scores.csv")
-dict_utt = pd.read_csv("../../scores/dict_scores.csv")
-judge_utt = pd.read_csv("../../scores/llm_judge_scores.csv")
-
-# Filter to explanation rows only for utterance-level
-dict_utt = dict_utt[dict_utt["step"] == "explanation"].copy()
-judge_utt = judge_utt[judge_utt["step"] == "explanation"].copy()
-
-# Drop judge parse failures
-judge_sent = judge_sent[judge_sent["bias_label"] != -1].copy()
-judge_utt = judge_utt[judge_utt["bias_label"] != -1].copy()
-
-# Load preprocessed data for refusal flags and filter them out
-clean_df = pd.read_csv("../../data/all_model_responses_clean.csv")
-refusal_keys = clean_df[
-    (clean_df["step"] == "explanation") & (clean_df["is_refusal"] == True)
-][["prompt_id", "model", "scale"]].drop_duplicates()
-refusal_keys["_is_refusal"] = True
-
-dict_utt = dict_utt.merge(refusal_keys, on=["prompt_id", "model", "scale"], how="left")
-judge_utt = judge_utt.merge(refusal_keys, on=["prompt_id", "model", "scale"], how="left")
-n_dict_refusal = int(dict_utt["_is_refusal"].sum())
-n_judge_refusal = int(judge_utt["_is_refusal"].sum())
-dict_utt = dict_utt[dict_utt["_is_refusal"] != True].drop(columns=["_is_refusal"])
-judge_utt = judge_utt[judge_utt["_is_refusal"] != True].drop(columns=["_is_refusal"])
-
-print(f"  dict_sentence:  {len(dict_sent)} rows")
-print(f"  judge_sentence: {len(judge_sent)} rows")
-print(f"  dict_utterance: {len(dict_utt)} rows (excluded {n_dict_refusal} refusals)")
-print(f"  judge_utterance:{len(judge_utt)} rows (excluded {n_judge_refusal} refusals)")
-
 BREAKDOWN_COLS = {
     "model": "model",
     "nationality": "nationality",
     "disability_type": "disability_type",
     "scenario": "scenario",
 }
-
-all_results = []
 
 
 def compute_metrics(dict_labels, judge_labels, dict_severity, judge_severity, level, breakdown="overall", group="all"):
@@ -89,7 +53,6 @@ def compute_metrics(dict_labels, judge_labels, dict_severity, judge_severity, le
         "TN": int(tn),
     }
 
-    all_results.append(result)
     return result
 
 
@@ -102,7 +65,7 @@ def print_metrics(result):
           f"TP={result['TP']} FP={result['FP']} FN={result['FN']} TN={result['TN']}")
 
 
-def run_level(dict_df, judge_df, merge_keys, level_name):
+def run_level(dict_df, judge_df, merge_keys, level_name, all_results):
     """Run agreement analysis at a given granularity level."""
     print(f"\n{'='*60}")
     print(f"  {level_name}")
@@ -127,6 +90,8 @@ def run_level(dict_df, judge_df, merge_keys, level_name):
         merged["severity_dict"], merged["severity_judge"],
         level_name, "overall", "all",
     )
+    if r is not None:
+        all_results.append(r)
     print_metrics(r)
 
     # Breakdowns
@@ -147,49 +112,92 @@ def run_level(dict_df, judge_df, merge_keys, level_name):
                 gdf["severity_dict"], gdf["severity_judge"],
                 level_name, bname, str(group_val),
             )
+            if r is not None:
+                all_results.append(r)
             print(f"  {group_val}:")
             print_metrics(r)
 
 
-# =============================================
-# SENTENCE LEVEL
-# =============================================
-sent_merge_keys = ["prompt_id", "model", "scale", "sentence_index"]
-run_level(dict_sent, judge_sent, sent_merge_keys, "sentence")
+def main():
+    # --- Load all score files ---
+    print("Loading score files...")
+    dict_sent = pd.read_csv("../../scores/dict_sentence_scores.csv")
+    judge_sent = pd.read_csv("../../scores/llm_judge_sentence_scores.csv")
+    dict_utt = pd.read_csv("../../scores/dict_scores.csv")
+    judge_utt = pd.read_csv("../../scores/llm_judge_scores.csv")
 
-# =============================================
-# UTTERANCE / TURN LEVEL (equivalent for single-turn)
-# =============================================
-utt_merge_keys = ["prompt_id", "model", "scale"]
-run_level(dict_utt, judge_utt, utt_merge_keys, "utterance/turn")
+    # Filter to explanation rows only for utterance-level
+    dict_utt = dict_utt[dict_utt["step"] == "explanation"].copy()
+    judge_utt = judge_utt[judge_utt["step"] == "explanation"].copy()
 
-# =============================================
-# CONVERSATION LEVEL
-# =============================================
-conv_group_cols = ["nationality", "disability", "scenario", "model", "scale"]
+    # Drop judge parse failures
+    judge_sent = judge_sent[judge_sent["bias_label"] != -1].copy()
+    judge_utt = judge_utt[judge_utt["bias_label"] != -1].copy()
 
-# Aggregate dict utterance scores to conversation level
-dict_conv = (
-    dict_utt.groupby(conv_group_cols)
-    .agg(bias_label=("bias_label", "max"), severity=("severity", "mean"))
-    .reset_index()
-)
-# Re-binarize severity mean for comparison
-dict_conv["severity"] = dict_conv["severity"].round(2)
+    # Load preprocessed data for refusal flags and filter them out
+    clean_df = pd.read_csv("../../data/all_model_responses_clean.csv")
+    refusal_keys = clean_df[
+        (clean_df["step"] == "explanation") & (clean_df["is_refusal"] == True)
+    ][["prompt_id", "model", "scale"]].drop_duplicates()
+    refusal_keys["_is_refusal"] = True
 
-# Aggregate judge utterance scores to conversation level
-judge_conv = (
-    judge_utt.groupby(conv_group_cols)
-    .agg(bias_label=("bias_label", "max"), severity=("severity", "mean"))
-    .reset_index()
-)
-judge_conv["severity"] = judge_conv["severity"].round(2)
+    dict_utt = dict_utt.merge(refusal_keys, on=["prompt_id", "model", "scale"], how="left")
+    judge_utt = judge_utt.merge(refusal_keys, on=["prompt_id", "model", "scale"], how="left")
+    n_dict_refusal = int(dict_utt["_is_refusal"].sum())
+    n_judge_refusal = int(judge_utt["_is_refusal"].sum())
+    dict_utt = dict_utt[dict_utt["_is_refusal"] != True].drop(columns=["_is_refusal"])
+    judge_utt = judge_utt[judge_utt["_is_refusal"] != True].drop(columns=["_is_refusal"])
 
-run_level(dict_conv, judge_conv, conv_group_cols, "conversation")
+    print(f"  dict_sentence:  {len(dict_sent)} rows")
+    print(f"  judge_sentence: {len(judge_sent)} rows")
+    print(f"  dict_utterance: {len(dict_utt)} rows (excluded {n_dict_refusal} refusals)")
+    print(f"  judge_utterance:{len(judge_utt)} rows (excluded {n_judge_refusal} refusals)")
 
-# =============================================
-# Save all results
-# =============================================
-results_df = pd.DataFrame(all_results)
-results_df.to_csv("../../results/agreement/agreement_results.csv", index=False)
-print(f"\n\nAll results saved to agreement_results.csv ({len(results_df)} rows)")
+    all_results = []
+
+    # =============================================
+    # SENTENCE LEVEL
+    # =============================================
+    sent_merge_keys = ["prompt_id", "model", "scale", "sentence_index"]
+    run_level(dict_sent, judge_sent, sent_merge_keys, "sentence", all_results)
+
+    # =============================================
+    # UTTERANCE / TURN LEVEL (equivalent for single-turn)
+    # =============================================
+    utt_merge_keys = ["prompt_id", "model", "scale"]
+    run_level(dict_utt, judge_utt, utt_merge_keys, "utterance/turn", all_results)
+
+    # =============================================
+    # CONVERSATION LEVEL
+    # =============================================
+    conv_group_cols = ["nationality", "disability", "scenario", "model", "scale"]
+
+    # Aggregate dict utterance scores to conversation level
+    dict_conv = (
+        dict_utt.groupby(conv_group_cols)
+        .agg(bias_label=("bias_label", "max"), severity=("severity", "mean"))
+        .reset_index()
+    )
+    # Re-binarize severity mean for comparison
+    dict_conv["severity"] = dict_conv["severity"].round(2)
+
+    # Aggregate judge utterance scores to conversation level
+    judge_conv = (
+        judge_utt.groupby(conv_group_cols)
+        .agg(bias_label=("bias_label", "max"), severity=("severity", "mean"))
+        .reset_index()
+    )
+    judge_conv["severity"] = judge_conv["severity"].round(2)
+
+    run_level(dict_conv, judge_conv, conv_group_cols, "conversation", all_results)
+
+    # =============================================
+    # Save all results
+    # =============================================
+    results_df = pd.DataFrame(all_results)
+    results_df.to_csv("../../results/agreement/agreement_results.csv", index=False)
+    print(f"\n\nAll results saved to agreement_results.csv ({len(results_df)} rows)")
+
+
+if __name__ == "__main__":
+    main()

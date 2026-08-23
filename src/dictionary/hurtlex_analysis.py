@@ -37,27 +37,42 @@ HURTLEX_CATS = {
     "svp": "words related to the seven deadly sins",
 }
 
-# ── Load HurtLex lexicon ────────────────────────────────────
+# Lazy-loaded HurtLex data
+HURTLEX = None
+MULTIWORD = None
+MULTIWORD_SORTED = None
+SINGLEWORD = None
+
 HURTLEX_TSV = "../../external/hurtlex_repo/lexica/EN/1.2/hurtlex_EN.tsv"
-hurtlex_df = pd.read_csv(HURTLEX_TSV, sep="\t")
-# Build lookup: lowered lemma → category (keep first category for duplicates)
-HURTLEX = {}
-for _, row in hurtlex_df.iterrows():
-    lemma = str(row["lemma"]).lower().strip()
-    if lemma not in HURTLEX:
-        HURTLEX[lemma] = row["category"]
-print(f"HurtLex loaded: {len(HURTLEX)} unique lemmas")
 
-# Sort multi-word entries longest-first for greedy matching
-MULTIWORD = {k: v for k, v in HURTLEX.items() if " " in k}
-MULTIWORD_SORTED = sorted(MULTIWORD.keys(), key=lambda x: -len(x))
-SINGLEWORD = {k: v for k, v in HURTLEX.items() if " " not in k}
 
-# ── Load responses ──────────────────────────────────────────
-df = pd.read_csv("../../data/all_model_responses_clean.csv")
-exp = df[df["step"] == "explanation"].copy()
-exp = exp[exp["is_refusal"] == False].copy()
-print(f"Explanation rows (non-refusal): {len(exp)}")
+def _load_hurtlex(tsv_path=None):
+    global HURTLEX, MULTIWORD, MULTIWORD_SORTED, SINGLEWORD
+    if HURTLEX is not None:
+        return
+    if tsv_path is None:
+        tsv_path = HURTLEX_TSV
+    hurtlex_df = pd.read_csv(tsv_path, sep="\t")
+    HURTLEX = {}
+    for _, row in hurtlex_df.iterrows():
+        lemma = str(row["lemma"]).lower().strip()
+        if lemma not in HURTLEX:
+            HURTLEX[lemma] = row["category"]
+    if len(HURTLEX) < 100:
+        raise RuntimeError(
+            f"HurtLex loaded only {len(HURTLEX)} lemmas; "
+            "expected 1000+. TSV may be empty or corrupt."
+        )
+    print(f"HurtLex loaded: {len(HURTLEX)} unique lemmas")
+
+    MULTIWORD = {k: v for k, v in HURTLEX.items() if " " in k}
+    MULTIWORD_SORTED = sorted(MULTIWORD.keys(), key=lambda x: -len(x))
+    SINGLEWORD = {k: v for k, v in HURTLEX.items() if " " not in k}
+
+
+def _ensure_loaded():
+    if HURTLEX is None:
+        _load_hurtlex()
 
 
 # ── Preprocessing ───────────────────────────────────────────
@@ -75,6 +90,7 @@ def tokenize(text):
 # ── Scoring ─────────────────────────────────────────────────
 def match_hurtlex(text):
     """Return list of (term, category) matches against HurtLex."""
+    _ensure_loaded()
     text_lower = str(text).lower()
     matches = []
 
@@ -156,228 +172,236 @@ def score_text(text):
     }
 
 
-# ── Score all explanation rows ──────────────────────────────
-print("Scoring responses...")
-utt_rows = []
-sent_rows = []
+def main():
+    _load_hurtlex()
 
-for _, row in exp.iterrows():
-    result = score_text(row["response"])
+    # ── Load responses ──────────────────────────────────────────
+    df = pd.read_csv("../../data/all_model_responses_clean.csv")
+    exp = df[df["step"] == "explanation"].copy()
+    exp = exp[exp["is_refusal"] == False].copy()
+    print(f"Explanation rows (non-refusal): {len(exp)}")
 
-    terms_str = ", ".join(t for t, _ in result["matched_terms"])
-    cats_str = ", ".join(c for _, c in result["matched_terms"])
-    cat_summary = "; ".join(f"{c}={n}" for c, n in result["categories"].items())
+    # ── Score all explanation rows ──────────────────────────────
+    print("Scoring responses...")
+    utt_rows = []
+    sent_rows = []
 
-    utt_rows.append({
-        "prompt_id":        row["prompt_id"],
-        "nationality":      row["nationality"],
-        "disability":       row["disability"],
-        "disability_type":  row["disability_type"],
-        "scenario_id":      row["scenario_id"],
-        "scenario":         row["scenario"],
-        "model":            row["model"],
-        "scale":            row["scale"],
-        "step":             row["step"],
-        "bias_count":       result["bias_count"],
-        "bias_score_norm":  result["bias_score_norm"],
-        "bias_label":       result["bias_label"],
-        "severity":         result["severity"],
-        "matched_terms":    terms_str,
-        "hurtlex_category": cats_str,
-        "category_counts":  cat_summary,
-        "num_sentences":    result["num_sentences"],
-    })
+    for _, row in exp.iterrows():
+        result = score_text(row["response"])
 
-    for idx, s in enumerate(result["sentence_scores"]):
-        s_terms_str = ", ".join(t for t, _ in s["matched_terms"])
-        s_cats_str = ", ".join(c for _, c in s["matched_terms"])
-        sent_rows.append({
+        terms_str = ", ".join(t for t, _ in result["matched_terms"])
+        cats_str = ", ".join(c for _, c in result["matched_terms"])
+        cat_summary = "; ".join(f"{c}={n}" for c, n in result["categories"].items())
+
+        utt_rows.append({
             "prompt_id":        row["prompt_id"],
-            "model":            row["model"],
-            "scale":            row["scale"],
             "nationality":      row["nationality"],
             "disability":       row["disability"],
             "disability_type":  row["disability_type"],
+            "scenario_id":      row["scenario_id"],
             "scenario":         row["scenario"],
-            "sentence_index":   idx,
-            "sentence_text":    s["sentence"],
-            "bias_count":       s["bias_count"],
-            "bias_score_norm":  round(s["bias_norm"], 4),
-            "bias_label":       1 if s["bias_count"] > 0 else 0,
-            "severity":         severity_from_count(s["bias_count"]),
-            "matched_terms":    s_terms_str,
-            "hurtlex_category": s_cats_str,
+            "model":            row["model"],
+            "scale":            row["scale"],
+            "step":             row["step"],
+            "bias_count":       result["bias_count"],
+            "bias_score_norm":  result["bias_score_norm"],
+            "bias_label":       result["bias_label"],
+            "severity":         result["severity"],
+            "matched_terms":    terms_str,
+            "hurtlex_category": cats_str,
+            "category_counts":  cat_summary,
+            "num_sentences":    result["num_sentences"],
         })
 
-utt_df = pd.DataFrame(utt_rows)
-sent_df = pd.DataFrame(sent_rows)
+        for idx, s in enumerate(result["sentence_scores"]):
+            s_terms_str = ", ".join(t for t, _ in s["matched_terms"])
+            s_cats_str = ", ".join(c for _, c in s["matched_terms"])
+            sent_rows.append({
+                "prompt_id":        row["prompt_id"],
+                "model":            row["model"],
+                "scale":            row["scale"],
+                "nationality":      row["nationality"],
+                "disability":       row["disability"],
+                "disability_type":  row["disability_type"],
+                "scenario":         row["scenario"],
+                "sentence_index":   idx,
+                "sentence_text":    s["sentence"],
+                "bias_count":       s["bias_count"],
+                "bias_score_norm":  round(s["bias_norm"], 4),
+                "bias_label":       1 if s["bias_count"] > 0 else 0,
+                "severity":         severity_from_count(s["bias_count"]),
+                "matched_terms":    s_terms_str,
+                "hurtlex_category": s_cats_str,
+            })
 
-utt_df.to_csv("../../scores/hurtlex_scores.csv", index=False)
-sent_df.to_csv("../../scores/hurtlex_sentence_scores.csv", index=False)
-print(f"Saved hurtlex_scores.csv ({len(utt_df)} rows)")
-print(f"Saved hurtlex_sentence_scores.csv ({len(sent_df)} rows)")
+    utt_df = pd.DataFrame(utt_rows)
+    sent_df = pd.DataFrame(sent_rows)
 
-# ── Summary stats ───────────────────────────────────────────
-print(f"\n{'='*60}")
-print(f"  HURTLEX SCORING SUMMARY")
-print(f"{'='*60}")
-print(f"Overall bias rate:  {utt_df['bias_label'].mean():.1%}")
-print(f"Mean bias count:    {utt_df['bias_count'].mean():.2f}")
-print(f"Mean severity:      {utt_df['severity'].mean():.2f}")
+    utt_df.to_csv("../../scores/hurtlex_scores.csv", index=False)
+    sent_df.to_csv("../../scores/hurtlex_sentence_scores.csv", index=False)
+    print(f"Saved hurtlex_scores.csv ({len(utt_df)} rows)")
+    print(f"Saved hurtlex_sentence_scores.csv ({len(sent_df)} rows)")
 
-for label, col in [("model", "model"), ("nationality", "nationality"),
-                    ("disability_type", "disability_type"), ("scenario", "scenario")]:
-    print(f"\n--- By {label} ---")
-    print(utt_df.groupby(col)[["bias_count", "bias_score_norm", "severity"]].mean().round(3).to_string())
+    # ── Summary stats ───────────────────────────────────────────
+    print(f"\n{'='*60}")
+    print(f"  HURTLEX SCORING SUMMARY")
+    print(f"{'='*60}")
+    print(f"Overall bias rate:  {utt_df['bias_label'].mean():.1%}")
+    print(f"Mean bias count:    {utt_df['bias_count'].mean():.2f}")
+    print(f"Mean severity:      {utt_df['severity'].mean():.2f}")
 
-# Top matched terms
-all_terms = []
-for terms in utt_df["matched_terms"]:
-    if terms:
-        all_terms.extend(terms.split(", "))
-term_counts = Counter(all_terms)
-print("\nTop 20 most matched HurtLex terms:")
-for term, count in term_counts.most_common(20):
-    cat = HURTLEX.get(term, "?")
-    desc = HURTLEX_CATS.get(cat, "")
-    print(f"  {term:<25} {count:>4}  [{cat}] {desc}")
+    for label, col in [("model", "model"), ("nationality", "nationality"),
+                        ("disability_type", "disability_type"), ("scenario", "scenario")]:
+        print(f"\n--- By {label} ---")
+        print(utt_df.groupby(col)[["bias_count", "bias_score_norm", "severity"]].mean().round(3).to_string())
 
-# Top categories
-all_cats = []
-for cats in utt_df["hurtlex_category"]:
-    if cats:
-        all_cats.extend(cats.split(", "))
-cat_counts = Counter(all_cats)
-print("\nCategory distribution:")
-for cat, count in cat_counts.most_common():
-    desc = HURTLEX_CATS.get(cat, "")
-    print(f"  {cat:<5} {count:>5}  {desc}")
+    # Top matched terms
+    all_terms = []
+    for terms in utt_df["matched_terms"]:
+        if terms:
+            all_terms.extend(terms.split(", "))
+    term_counts = Counter(all_terms)
+    print("\nTop 20 most matched HurtLex terms:")
+    for term, count in term_counts.most_common(20):
+        cat = HURTLEX.get(term, "?")
+        desc = HURTLEX_CATS.get(cat, "")
+        print(f"  {term:<25} {count:>4}  [{cat}] {desc}")
 
+    # Top categories
+    all_cats = []
+    for cats in utt_df["hurtlex_category"]:
+        if cats:
+            all_cats.extend(cats.split(", "))
+    cat_counts = Counter(all_cats)
+    print("\nCategory distribution:")
+    for cat, count in cat_counts.most_common():
+        desc = HURTLEX_CATS.get(cat, "")
+        print(f"  {cat:<5} {count:>5}  {desc}")
 
-# ── Agreement analysis ──────────────────────────────────────
-print(f"\n{'='*60}")
-print(f"  AGREEMENT ANALYSIS")
-print(f"{'='*60}")
+    # ── Agreement analysis ──────────────────────────────────────
+    print(f"\n{'='*60}")
+    print(f"  AGREEMENT ANALYSIS")
+    print(f"{'='*60}")
 
-BREAKDOWN_COLS = {
-    "model": "model",
-    "nationality": "nationality",
-    "disability_type": "disability_type",
-    "scenario": "scenario",
-}
-
-agreement_rows = []
-
-
-def compute_agreement(labels_a, labels_b, sev_a, sev_b, level, method_pair, breakdown="overall", group="all"):
-    n = len(labels_a)
-    if n == 0:
-        return None
-
-    agree = (labels_a.values == labels_b.values).sum()
-    agree_rate = agree / n
-
-    try:
-        kappa = cohen_kappa_score(labels_a, labels_b)
-    except ValueError:
-        kappa = np.nan
-
-    if sev_a.nunique() > 1 or sev_b.nunique() > 1:
-        rho, rho_p = spearmanr(sev_a, sev_b)
-    else:
-        rho, rho_p = np.nan, np.nan
-
-    labels = [0, 1]
-    cm = confusion_matrix(labels_a, labels_b, labels=labels)
-    tn, fp, fn, tp = cm.ravel()
-
-    result = {
-        "level": level,
-        "method_pair": method_pair,
-        "breakdown": breakdown,
-        "group": group,
-        "n": n,
-        "agreement_rate": round(agree_rate, 4),
-        "cohens_kappa": round(kappa, 4) if not np.isnan(kappa) else np.nan,
-        "spearman_rho": round(rho, 4) if not np.isnan(rho) else np.nan,
-        "spearman_p": round(rho_p, 6) if not np.isnan(rho_p) else np.nan,
-        "TP": int(tp), "FP": int(fp), "FN": int(fn), "TN": int(tn),
+    BREAKDOWN_COLS = {
+        "model": "model",
+        "nationality": "nationality",
+        "disability_type": "disability_type",
+        "scenario": "scenario",
     }
-    agreement_rows.append(result)
-    return result
+
+    agreement_rows = []
+
+    def compute_agreement(labels_a, labels_b, sev_a, sev_b, level, method_pair, breakdown="overall", group="all"):
+        n = len(labels_a)
+        if n == 0:
+            return None
+
+        agree = (labels_a.values == labels_b.values).sum()
+        agree_rate = agree / n
+
+        try:
+            kappa = cohen_kappa_score(labels_a, labels_b)
+        except ValueError:
+            kappa = np.nan
+
+        if sev_a.nunique() > 1 or sev_b.nunique() > 1:
+            rho, rho_p = spearmanr(sev_a, sev_b)
+        else:
+            rho, rho_p = np.nan, np.nan
+
+        labels = [0, 1]
+        cm = confusion_matrix(labels_a, labels_b, labels=labels)
+        tn, fp, fn, tp = cm.ravel()
+
+        result = {
+            "level": level,
+            "method_pair": method_pair,
+            "breakdown": breakdown,
+            "group": group,
+            "n": n,
+            "agreement_rate": round(agree_rate, 4),
+            "cohens_kappa": round(kappa, 4) if not np.isnan(kappa) else np.nan,
+            "spearman_rho": round(rho, 4) if not np.isnan(rho) else np.nan,
+            "spearman_p": round(rho_p, 6) if not np.isnan(rho_p) else np.nan,
+            "TP": int(tp), "FP": int(fp), "FN": int(fn), "TN": int(tn),
+        }
+        agreement_rows.append(result)
+        return result
+
+    def print_result(r):
+        if r is None:
+            print("    (no data)")
+            return
+        print(f"    n={r['n']}  agree={r['agreement_rate']:.1%}  "
+              f"kappa={r['cohens_kappa']}  rho={r['spearman_rho']}  "
+              f"TP={r['TP']} FP={r['FP']} FN={r['FN']} TN={r['TN']}")
+
+    def run_agreement(df_a, df_b, merge_keys, level, method_pair):
+        print(f"\n--- {method_pair} @ {level} ---")
+        merged = pd.merge(df_a, df_b, on=merge_keys, suffixes=("_a", "_b"), how="inner")
+        print(f"Merged: {len(merged)} rows")
+        if len(merged) == 0:
+            return
+
+        r = compute_agreement(
+            merged["bias_label_a"], merged["bias_label_b"],
+            merged["severity_a"], merged["severity_b"],
+            level, method_pair,
+        )
+        print_result(r)
+
+        for bname, bcol in BREAKDOWN_COLS.items():
+            col = bcol if bcol in merged.columns else (bcol + "_a" if bcol + "_a" in merged.columns else None)
+            if col is None:
+                continue
+            for group_val, gdf in merged.groupby(col):
+                r = compute_agreement(
+                    gdf["bias_label_a"], gdf["bias_label_b"],
+                    gdf["severity_a"], gdf["severity_b"],
+                    level, method_pair, bname, str(group_val),
+                )
+
+    # Load other scores for comparison
+    dict_utt = pd.read_csv("../../scores/dict_scores.csv")
+    dict_utt = dict_utt[dict_utt["step"] == "explanation"].copy()
+    dict_sent = pd.read_csv("../../scores/dict_sentence_scores.csv")
+
+    judge_utt = pd.read_csv("../../scores/llm_judge_scores.csv")
+    judge_utt = judge_utt[judge_utt["step"] == "explanation"].copy()
+    judge_utt = judge_utt[judge_utt["bias_label"] != -1].copy()
+    judge_sent = pd.read_csv("../../scores/llm_judge_sentence_scores.csv")
+    judge_sent = judge_sent[judge_sent["bias_label"] != -1].copy()
+
+    # Filter refusals from dict/judge utterance-level
+    clean = pd.read_csv("../../data/all_model_responses_clean.csv")
+    refusal_keys = clean[
+        (clean["step"] == "explanation") & (clean["is_refusal"] == True)
+    ][["prompt_id", "model", "scale"]].drop_duplicates()
+    refusal_keys["_refusal"] = True
+
+    for target in [dict_utt, judge_utt]:
+        target_merged = target.merge(refusal_keys, on=["prompt_id", "model", "scale"], how="left")
+        mask = target_merged["_refusal"] != True
+        target.drop(target.index[~mask.values], inplace=True)
+
+    # Utterance-level keys
+    utt_keys = ["prompt_id", "model", "scale"]
+    sent_keys = ["prompt_id", "model", "scale", "sentence_index"]
+
+    # HurtLex vs bias-lexicon
+    run_agreement(utt_df, dict_utt, utt_keys, "utterance", "hurtlex_vs_lexicon")
+    run_agreement(sent_df, dict_sent, sent_keys, "sentence", "hurtlex_vs_lexicon")
+
+    # HurtLex vs LLM judge
+    run_agreement(utt_df, judge_utt, utt_keys, "utterance", "hurtlex_vs_judge")
+    run_agreement(sent_df, judge_sent, sent_keys, "sentence", "hurtlex_vs_judge")
+
+    # Save agreement results
+    agree_df = pd.DataFrame(agreement_rows)
+    agree_df.to_csv("../../results/agreement/hurtlex_agreement.csv", index=False)
+    print(f"\nSaved hurtlex_agreement.csv ({len(agree_df)} rows)")
 
 
-def print_result(r):
-    if r is None:
-        print("    (no data)")
-        return
-    print(f"    n={r['n']}  agree={r['agreement_rate']:.1%}  "
-          f"kappa={r['cohens_kappa']}  rho={r['spearman_rho']}  "
-          f"TP={r['TP']} FP={r['FP']} FN={r['FN']} TN={r['TN']}")
-
-
-def run_agreement(df_a, df_b, merge_keys, level, method_pair):
-    print(f"\n--- {method_pair} @ {level} ---")
-    merged = pd.merge(df_a, df_b, on=merge_keys, suffixes=("_a", "_b"), how="inner")
-    print(f"Merged: {len(merged)} rows")
-    if len(merged) == 0:
-        return
-
-    r = compute_agreement(
-        merged["bias_label_a"], merged["bias_label_b"],
-        merged["severity_a"], merged["severity_b"],
-        level, method_pair,
-    )
-    print_result(r)
-
-    for bname, bcol in BREAKDOWN_COLS.items():
-        col = bcol if bcol in merged.columns else (bcol + "_a" if bcol + "_a" in merged.columns else None)
-        if col is None:
-            continue
-        for group_val, gdf in merged.groupby(col):
-            r = compute_agreement(
-                gdf["bias_label_a"], gdf["bias_label_b"],
-                gdf["severity_a"], gdf["severity_b"],
-                level, method_pair, bname, str(group_val),
-            )
-
-
-# Load other scores for comparison
-dict_utt = pd.read_csv("../../scores/dict_scores.csv")
-dict_utt = dict_utt[dict_utt["step"] == "explanation"].copy()
-dict_sent = pd.read_csv("../../scores/dict_sentence_scores.csv")
-
-judge_utt = pd.read_csv("../../scores/llm_judge_scores.csv")
-judge_utt = judge_utt[judge_utt["step"] == "explanation"].copy()
-judge_utt = judge_utt[judge_utt["bias_label"] != -1].copy()
-judge_sent = pd.read_csv("../../scores/llm_judge_sentence_scores.csv")
-judge_sent = judge_sent[judge_sent["bias_label"] != -1].copy()
-
-# Filter refusals from dict/judge utterance-level
-clean = pd.read_csv("../../data/all_model_responses_clean.csv")
-refusal_keys = clean[
-    (clean["step"] == "explanation") & (clean["is_refusal"] == True)
-][["prompt_id", "model", "scale"]].drop_duplicates()
-refusal_keys["_refusal"] = True
-
-for target in [dict_utt, judge_utt]:
-    target_merged = target.merge(refusal_keys, on=["prompt_id", "model", "scale"], how="left")
-    mask = target_merged["_refusal"] != True
-    target.drop(target.index[~mask.values], inplace=True)
-
-# Utterance-level keys
-utt_keys = ["prompt_id", "model", "scale"]
-sent_keys = ["prompt_id", "model", "scale", "sentence_index"]
-
-# HurtLex vs bias-lexicon
-run_agreement(utt_df, dict_utt, utt_keys, "utterance", "hurtlex_vs_lexicon")
-run_agreement(sent_df, dict_sent, sent_keys, "sentence", "hurtlex_vs_lexicon")
-
-# HurtLex vs LLM judge
-run_agreement(utt_df, judge_utt, utt_keys, "utterance", "hurtlex_vs_judge")
-run_agreement(sent_df, judge_sent, sent_keys, "sentence", "hurtlex_vs_judge")
-
-# Save agreement results
-agree_df = pd.DataFrame(agreement_rows)
-agree_df.to_csv("../../results/agreement/hurtlex_agreement.csv", index=False)
-print(f"\nSaved hurtlex_agreement.csv ({len(agree_df)} rows)")
+if __name__ == "__main__":
+    main()

@@ -37,13 +37,13 @@ The disagreement replicates on a third operational dataset (deployment-framed, a
 - **`hpc/`** — HPC pipeline for full-corpus MultiWOZ evaluation and operational dataset (SLURM scripts, judge results, statistics, figures).
 - **`results/`** — Aggregate tables and figures as reported in the dissertation.
 - **`data/example/`** — Synthetic fixture data for testing.
-- **`tests/`** — Schema validation, agreement metric tests, smoke test.
+- **`tests/`** — Unit tests for preprocessing (refusal detection, response cleaning), dictionary scoring (Bias-Lexicon, HurtLex tokenization and matching), inter-rater agreement metrics, and fixture schema validation. 80 tests, all importing from `src/`.
 
 ## Quickstart
 
 ```bash
 pip install -r requirements.txt
-python -m pytest tests/ -v           # 11 tests, <3 seconds
+python -m pytest tests/ -v           # 82 tests, <3 seconds
 bash scripts/regenerate_figure.sh     # regenerates fig1 from committed results
 ```
 

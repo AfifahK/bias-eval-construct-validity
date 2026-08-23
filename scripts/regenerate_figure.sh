@@ -7,7 +7,7 @@
 # Writes to:  results/figures/fig1_bias_rates_by_method.png
 
 set -e
-cd "$(dirname "$0")/src/analysis"
+cd "$(dirname "$0")/../src/analysis"
 python3 -c "
 import pandas as pd
 import matplotlib.pyplot as plt

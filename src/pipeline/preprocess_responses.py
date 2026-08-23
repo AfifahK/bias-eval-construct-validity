@@ -9,11 +9,7 @@ Preprocess all_model_responses.csv:
 import pandas as pd
 import re
 
-df = pd.read_csv("../../data/all_model_responses.csv")
-print(f"Loaded {len(df)} rows ({(df['step']=='explanation').sum()} explanation, "
-      f"{(df['step']=='likert').sum()} likert)")
 
-# --- Clean explanation responses ---
 def clean_response(text):
     """Strip leading Likert digit + newlines, and any 'Explanation:' prefix."""
     text = str(text)
@@ -49,49 +45,58 @@ def has_ai_self_reference(text):
     return any(p in text for p in patterns)
 
 
-# Apply cleaning only to explanation rows
-mask = df["step"] == "explanation"
-df.loc[mask, "response_clean"] = df.loc[mask, "response"].apply(clean_response)
-df.loc[~mask, "response_clean"] = df.loc[~mask, "response"]
+def main():
+    df = pd.read_csv("../../data/all_model_responses.csv")
+    print(f"Loaded {len(df)} rows ({(df['step']=='explanation').sum()} explanation, "
+          f"{(df['step']=='likert').sum()} likert)")
 
-# Flag refusals and AI self-reference (explanation rows only; False for likert)
-df["is_refusal"] = False
-df.loc[mask, "is_refusal"] = df.loc[mask, "response_clean"].apply(is_refusal)
+    # Apply cleaning only to explanation rows
+    mask = df["step"] == "explanation"
+    df.loc[mask, "response_clean"] = df.loc[mask, "response"].apply(clean_response)
+    df.loc[~mask, "response_clean"] = df.loc[~mask, "response"]
 
-df["ai_self_reference"] = False
-df.loc[mask, "ai_self_reference"] = df.loc[mask, "response_clean"].apply(has_ai_self_reference)
+    # Flag refusals and AI self-reference (explanation rows only; False for likert)
+    df["is_refusal"] = False
+    df.loc[mask, "is_refusal"] = df.loc[mask, "response_clean"].apply(is_refusal)
 
-# --- Summary ---
-exp = df[mask]
-refusals = exp["is_refusal"].sum()
-total_exp = len(exp)
-print(f"\n{'='*60}")
-print(f"  REFUSAL SUMMARY")
-print(f"{'='*60}")
-print(f"Total explanation rows: {total_exp}")
-print(f"Total refusals: {refusals} ({refusals/total_exp:.1%})")
+    df["ai_self_reference"] = False
+    df.loc[mask, "ai_self_reference"] = df.loc[mask, "response_clean"].apply(has_ai_self_reference)
 
-print(f"\n--- Refusals by model ---")
-print(exp.groupby("model")["is_refusal"].agg(["sum", "count"]).rename(
-    columns={"sum": "refusals", "count": "total"}).to_string())
+    # --- Summary ---
+    exp = df[mask]
+    refusals = exp["is_refusal"].sum()
+    total_exp = len(exp)
+    print(f"\n{'='*60}")
+    print(f"  REFUSAL SUMMARY")
+    print(f"{'='*60}")
+    print(f"Total explanation rows: {total_exp}")
+    print(f"Total refusals: {refusals} ({refusals/total_exp:.1%})")
 
-print(f"\n--- Refusals by nationality ---")
-print(exp.groupby("nationality")["is_refusal"].agg(["sum", "count"]).rename(
-    columns={"sum": "refusals", "count": "total"}).to_string())
+    print(f"\n--- Refusals by model ---")
+    print(exp.groupby("model")["is_refusal"].agg(["sum", "count"]).rename(
+        columns={"sum": "refusals", "count": "total"}).to_string())
 
-print(f"\n--- Refusals by disability_type ---")
-print(exp.groupby("disability_type")["is_refusal"].agg(["sum", "count"]).rename(
-    columns={"sum": "refusals", "count": "total"}).to_string())
+    print(f"\n--- Refusals by nationality ---")
+    print(exp.groupby("nationality")["is_refusal"].agg(["sum", "count"]).rename(
+        columns={"sum": "refusals", "count": "total"}).to_string())
 
-print(f"\n--- Refusals by scenario ---")
-print(exp.groupby("scenario")["is_refusal"].agg(["sum", "count"]).rename(
-    columns={"sum": "refusals", "count": "total"}).to_string())
+    print(f"\n--- Refusals by disability_type ---")
+    print(exp.groupby("disability_type")["is_refusal"].agg(["sum", "count"]).rename(
+        columns={"sum": "refusals", "count": "total"}).to_string())
 
-print(f"\n--- AI self-references ---")
-print(f"Total: {exp['ai_self_reference'].sum()} ({exp['ai_self_reference'].mean():.1%})")
-print(exp.groupby("model")["ai_self_reference"].agg(["sum", "count"]).rename(
-    columns={"sum": "ai_self_ref", "count": "total"}).to_string())
+    print(f"\n--- Refusals by scenario ---")
+    print(exp.groupby("scenario")["is_refusal"].agg(["sum", "count"]).rename(
+        columns={"sum": "refusals", "count": "total"}).to_string())
 
-# Save
-df.to_csv("../../data/all_model_responses_clean.csv", index=False)
-print(f"\nSaved all_model_responses_clean.csv ({len(df)} rows)")
+    print(f"\n--- AI self-references ---")
+    print(f"Total: {exp['ai_self_reference'].sum()} ({exp['ai_self_reference'].mean():.1%})")
+    print(exp.groupby("model")["ai_self_reference"].agg(["sum", "count"]).rename(
+        columns={"sum": "ai_self_ref", "count": "total"}).to_string())
+
+    # Save
+    df.to_csv("../../data/all_model_responses_clean.csv", index=False)
+    print(f"\nSaved all_model_responses_clean.csv ({len(df)} rows)")
+
+
+if __name__ == "__main__":
+    main()
