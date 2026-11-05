@@ -46,7 +46,7 @@ fi
 step "7 HurtLex without 'can'"; $PY $A/hurtlex_no_can.py >/dev/null
 if ls $A/hpc_refusal_judges/results_hpc/refusal_*_v1.csv >/dev/null 2>&1; then
   step "8b judge outputs on refusals ($(ls $A/hpc_refusal_judges/results_hpc/*.csv | wc -l) HPC CSVs)"; $PY $A/score_refusal_judges.py >/dev/null
-else echo "== no HPC judge CSVs present; judge rows stay pending"; fi
+else echo "== no HPC judge CSVs present; judge rows are not computed"; fi
 step "9 figures and tables"; $PY $A/make_figures.py >/dev/null; $PY $A/make_tables.py >/dev/null
 if [[ -f $A/refusal_audit_all67.csv ]] && $PY - <<'PYEOF'
 import pandas as pd, sys

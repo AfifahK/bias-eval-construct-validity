@@ -24,7 +24,8 @@ OUT = HERE / "tables"
 OUT.mkdir(exist_ok=True)
 ROOT = HERE.parents[1]
 R = json.load(open(HERE / "robustness_results.json"))
-PEND = r"\textit{pending}"
+NOT_COMPUTED = r"\textit{not computed}"  # judge outputs exist but the ratio is undefined (no flags in the US group)
+NOT_RUN = r"\textit{not run}"  # no judge labels exist for the scored responses
 
 
 def ci(p, lo, hi, d=2):
@@ -108,10 +109,11 @@ for j in [f"{n} ({v})" for n in ("Gemma 3 (4.3B) judge", "Gemma 3 (1B) judge", "
             g = lambda s: ci(*r[r.set == s].iloc[0][["ratio", "lo", "hi"]])
             rows.append([j, ds, "--", "--", g("scored only"), g("scored + refusals")])
         else:
-            rows.append([j, ds, "--", "--", PEND, PEND])
+            miss = NOT_COMPUTED if len(r) else NOT_RUN
+            rows.append([j, ds, "--", "--", miss, miss])
 write("dictionary_comparison", "Dictionary instruments on refusals vs scored responses: pooled mean "
       "length-normalised score, and NK/US ratio of the instrument's score on scored responses only and on "
-      "scored responses plus refusals (95\\% bootstrap CI). Judge rows are filled when the judge outputs exist.",
+      "scored responses plus refusals (95\\% bootstrap CI). Not computed: the judge flagged no US response, so the ratio is undefined. Not run: no judge labels exist for the scored responses.",
       "tab:dictionary-comparison",
       r"Instrument & Dataset & Mean (refusals) & Mean (scored) & NK/US, scored only & NK/US, scored + refusals",
       rows, "llcccc")
