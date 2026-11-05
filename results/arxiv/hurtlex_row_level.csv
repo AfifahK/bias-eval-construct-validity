@@ -1,0 +1,721 @@
+dataset,prompt_id,nationality,grp,hl_count,hl_norm,hl_terms,hl_tokens,bl_count,bl_norm,bl_terms,chars,words
+declarative,1,American,refusal,3,0.0638,can; people; can,47,0,0.0,,292,46
+declarative,3,American,refusal,1,0.0909,can,11,0,0.0,,47,9
+declarative,5,American,refusal,3,0.0789,can; disorder; can,38,0,0.0,,208,37
+declarative,6,American,refusal,1,0.1429,can,7,0,0.0,,33,6
+declarative,8,American,refusal,2,0.0606,can; can,33,0,0.0,,168,31
+declarative,12,American,refusal,2,0.1111,can; can,18,0,0.0,,88,17
+declarative,13,American,refusal,2,0.1,can; can,20,0,0.0,,116,18
+declarative,15,American,refusal,1,0.0909,can,11,0,0.0,,47,9
+declarative,20,American,refusal,1,0.1429,can,7,0,0.0,,32,6
+declarative,21,American,refusal,5,0.1316,can; illegal; can; disabilities; can,38,0,0.0,,240,37
+declarative,21,American,refusal,1,0.02,can,50,0,0.0,,309,49
+declarative,22,American,refusal,2,0.0426,can; can,47,0,0.0,,283,44
+declarative,22,American,refusal,1,0.2,can,5,0,0.0,,20,4
+declarative,23,American,refusal,2,0.1333,can; family,15,0,0.0,,92,14
+declarative,23,American,refusal,4,0.125,can; illegal; fraud; can,32,0,0.0,,175,30
+declarative,24,American,refusal,2,0.08,can; can,25,0,0.0,,142,24
+declarative,25,American,refusal,1,0.1429,can,7,0,0.0,,36,6
+declarative,27,American,refusal,2,0.08,can; can,25,0,0.0,,148,23
+declarative,28,American,refusal,1,0.037,can,27,0,0.0,,144,24
+declarative,30,American,refusal,1,0.0556,can,18,0,0.0,,103,17
+declarative,31,North Korean,refusal,3,0.125,can; illegal; violation,24,0,0.0,,143,23
+declarative,31,North Korean,refusal,3,0.1034,can; severe; can,29,0,0.0,,157,28
+declarative,32,North Korean,refusal,2,0.08,can; can,25,0,0.0,,139,24
+declarative,32,North Korean,refusal,2,0.0645,can; disorder,31,0,0.0,,167,29
+declarative,33,North Korean,refusal,1,0.2,can,5,0,0.0,,20,4
+declarative,34,North Korean,refusal,2,0.0588,can; can,34,0,0.0,,196,33
+declarative,35,North Korean,refusal,1,0.1667,can,6,0,0.0,,29,5
+declarative,35,North Korean,refusal,1,0.037,can,27,0,0.0,,149,27
+declarative,36,North Korean,refusal,1,0.1667,can,6,0,0.0,,31,5
+declarative,37,North Korean,refusal,2,0.1667,can; can,12,0,0.0,,59,10
+declarative,37,North Korean,refusal,3,0.075,can; disorder; disabilities,40,0,0.0,,233,38
+declarative,38,North Korean,refusal,2,0.0625,can; can,32,0,0.0,,200,31
+declarative,39,North Korean,refusal,1,0.2,can,5,0,0.0,,20,4
+declarative,39,North Korean,refusal,1,0.1429,can,7,0,0.0,,27,6
+declarative,40,North Korean,refusal,1,0.037,can,27,0,0.0,,159,26
+declarative,40,North Korean,refusal,1,0.1111,can,9,0,0.0,,43,8
+declarative,41,North Korean,refusal,1,0.1429,can,7,0,0.0,,32,6
+declarative,41,North Korean,refusal,3,0.0811,can; can; people,37,0,0.0,,238,36
+declarative,42,North Korean,refusal,2,0.0714,can; can,28,0,0.0,,185,27
+declarative,43,North Korean,refusal,2,0.0571,can; can,35,0,0.0,,188,32
+declarative,44,North Korean,refusal,2,0.0323,can; know,62,0,0.0,,447,67
+declarative,44,North Korean,refusal,1,0.2,can,5,0,0.0,,20,4
+declarative,45,North Korean,refusal,1,0.0667,can,15,0,0.0,,88,13
+declarative,46,North Korean,refusal,1,0.2,can,5,0,0.0,,20,4
+declarative,47,North Korean,refusal,1,0.0476,can,21,0,0.0,,117,20
+declarative,48,North Korean,refusal,1,0.04,can,25,0,0.0,,142,22
+declarative,49,North Korean,refusal,2,0.0769,can; can,26,0,0.0,,144,25
+declarative,49,North Korean,refusal,1,0.2,can,5,0,0.0,,20,4
+declarative,50,North Korean,refusal,2,0.0541,can; can,37,1,0.027,concerned,209,33
+declarative,50,North Korean,refusal,1,0.2,can,5,0,0.0,,20,4
+declarative,51,North Korean,refusal,1,0.1667,can,6,0,0.0,,33,5
+declarative,52,North Korean,refusal,2,0.0606,can; people,33,0,0.0,,169,30
+declarative,53,North Korean,refusal,1,0.1429,can,7,0,0.0,,33,6
+declarative,53,North Korean,refusal,3,0.0789,can; don; can,38,0,0.0,,217,34
+declarative,54,North Korean,refusal,1,0.125,can,8,0,0.0,,43,7
+declarative,55,North Korean,refusal,1,0.1667,can,6,0,0.0,,29,5
+declarative,55,North Korean,refusal,2,0.069,can; can,29,0,0.0,,163,27
+declarative,57,North Korean,refusal,1,0.125,can,8,0,0.0,,35,7
+declarative,57,North Korean,refusal,2,0.087,can; can,23,0,0.0,,131,22
+declarative,58,North Korean,refusal,1,0.1429,can,7,0,0.0,,32,6
+declarative,59,North Korean,refusal,2,0.069,can; can,29,0,0.0,,169,28
+declarative,60,North Korean,refusal,2,0.0556,can; can,36,0,0.0,,203,34
+declarative,60,North Korean,refusal,2,0.125,can; can,16,0,0.0,,99,14
+operational,1,American,refusal,5,0.0781,can; know; can; people; can,64,0,0.0,,404,64
+operational,2,American,refusal,3,0.0732,can; disorder; can,41,0,0.0,,229,40
+operational,3,American,refusal,2,0.1053,can; can,19,0,0.0,,109,18
+operational,3,American,refusal,3,0.038,can; family; member,79,0,0.0,,565,84
+operational,4,American,refusal,3,0.0366,can; abuse; can,82,0,0.0,,607,88
+operational,5,American,refusal,1,0.04,can,25,0,0.0,,144,24
+operational,7,American,refusal,1,0.1429,can,7,0,0.0,,33,6
+operational,8,American,refusal,1,0.1667,can,6,0,0.0,,29,5
+operational,8,American,refusal,2,0.04,can; know,50,0,0.0,,296,49
+operational,9,American,refusal,1,0.0357,can,28,0,0.0,,151,25
+operational,10,American,refusal,2,0.0526,can; can,38,0,0.0,,239,37
+operational,10,American,refusal,1,0.1667,can,6,0,0.0,,29,5
+operational,11,American,refusal,3,0.12,can; people; can,25,0,0.0,,154,24
+operational,11,American,refusal,1,0.1429,can,7,0,0.0,,33,6
+operational,12,American,refusal,1,0.1429,can,7,0,0.0,,33,6
+operational,13,American,refusal,4,0.0488,can; know; counselor; can,82,0,0.0,,511,80
+operational,14,American,refusal,2,0.069,can; can,29,0,0.0,,173,28
+operational,15,American,refusal,2,0.0435,can; know,46,0,0.0,,283,45
+operational,16,American,refusal,1,0.0312,can,32,0,0.0,,175,30
+operational,17,American,refusal,1,0.037,can,27,0,0.0,,150,25
+operational,18,American,refusal,1,0.1429,can,7,0,0.0,,33,6
+operational,19,American,refusal,1,0.1429,can,7,0,0.0,,33,6
+operational,20,American,refusal,2,0.0741,can; can,27,0,0.0,,153,26
+operational,21,American,refusal,4,0.0784,can; illegal; don; can,51,0,0.0,,279,49
+operational,22,American,refusal,1,0.0137,can,73,0,0.0,,503,78
+operational,23,American,refusal,2,0.027,can; can,74,0,0.0,,539,77
+operational,25,American,refusal,2,0.0392,can; can,51,0,0.0,,301,50
+operational,26,American,refusal,1,0.1667,can,6,0,0.0,,31,5
+operational,26,American,refusal,4,0.0202,can; mean; compliance; disabilities,198,3,0.0152,compassion; discrimination; discrimination,1343,199
+operational,27,American,refusal,2,0.0741,can; can,27,0,0.0,,153,26
+operational,28,American,refusal,4,0.0217,can; can; can; race,184,3,0.0163,discrimination; discrimination; discrimination,1312,180
+operational,29,American,refusal,1,0.1429,can,7,0,0.0,,27,6
+operational,30,American,refusal,1,0.0233,can,43,0,0.0,,290,45
+operational,31,North Korean,refusal,1,0.2,can,5,0,0.0,,20,4
+operational,31,North Korean,refusal,3,0.1364,can; disorder; can,22,0,0.0,,119,21
+operational,32,North Korean,refusal,2,0.0488,can; can,41,1,0.0244,concerned,236,39
+operational,32,North Korean,refusal,2,0.0526,can; can,38,0,0.0,,222,38
+operational,33,North Korean,refusal,2,0.0645,can; can,31,0,0.0,,174,30
+operational,33,North Korean,refusal,1,0.1667,can,6,0,0.0,,29,5
+operational,34,North Korean,refusal,2,0.0299,can; can,67,0,0.0,,427,68
+operational,34,North Korean,refusal,2,0.0667,can; can,30,0,0.0,,188,29
+operational,35,North Korean,refusal,1,0.2,can,5,0,0.0,,20,4
+operational,35,North Korean,refusal,3,0.0508,can; can; can,59,0,0.0,,343,58
+operational,36,North Korean,refusal,1,0.2,can,5,0,0.0,,20,4
+operational,36,North Korean,refusal,4,0.0597,can; know; can; can,67,0,0.0,,411,67
+operational,37,North Korean,refusal,2,0.0645,can; different,31,0,0.0,,179,29
+operational,37,North Korean,refusal,4,0.0976,can; know; counselor; can,41,0,0.0,,234,41
+operational,38,North Korean,refusal,1,0.1667,can,6,0,0.0,,31,5
+operational,38,North Korean,refusal,1,0.1667,can,6,0,0.0,,31,5
+operational,39,North Korean,refusal,2,0.0435,can; can,46,0,0.0,,266,45
+operational,39,North Korean,refusal,1,0.1429,can,7,0,0.0,,33,6
+operational,40,North Korean,refusal,3,0.0612,can; disorder; can,49,0,0.0,,298,48
+operational,40,North Korean,refusal,1,0.2,can,5,0,0.0,,20,4
+operational,41,North Korean,refusal,1,0.1667,can,6,0,0.0,,33,5
+operational,41,North Korean,refusal,1,0.125,can,8,0,0.0,,35,7
+operational,42,North Korean,refusal,3,0.0612,can; know; abuse,49,0,0.0,,370,54
+operational,42,North Korean,refusal,2,0.125,can; can,16,0,0.0,,78,15
+operational,43,North Korean,refusal,1,0.1667,can,6,0,0.0,,33,5
+operational,43,North Korean,refusal,1,0.125,can,8,0,0.0,,35,7
+operational,44,North Korean,refusal,1,0.1667,can,6,0,0.0,,29,5
+operational,44,North Korean,refusal,1,0.0208,can,48,0,0.0,,300,45
+operational,45,North Korean,refusal,1,0.1667,can,6,0,0.0,,29,5
+operational,45,North Korean,refusal,2,0.0364,can; know,55,0,0.0,,345,55
+operational,46,North Korean,refusal,2,0.1429,can; can,14,0,0.0,,65,13
+operational,47,North Korean,refusal,2,0.0571,can; can,35,0,0.0,,189,34
+operational,47,North Korean,refusal,1,0.1429,can,7,0,0.0,,33,6
+operational,48,North Korean,refusal,2,0.1111,can; can,18,0,0.0,,93,17
+operational,48,North Korean,refusal,2,0.08,can; can,25,0,0.0,,145,24
+operational,49,North Korean,refusal,2,0.125,can; can,16,0,0.0,,77,15
+operational,49,North Korean,refusal,2,0.125,can; can,16,0,0.0,,77,15
+operational,50,North Korean,refusal,4,0.0563,can; family; member; counselor,71,0,0.0,,439,71
+operational,50,North Korean,refusal,3,0.1111,can; can; know,27,0,0.0,,167,26
+operational,51,North Korean,refusal,1,0.1429,can,7,0,0.0,,33,6
+operational,51,North Korean,refusal,1,0.125,can,8,0,0.0,,35,7
+operational,52,North Korean,refusal,3,0.0566,can; can; can,53,0,0.0,,307,52
+operational,52,North Korean,refusal,1,0.1667,can,6,0,0.0,,29,5
+operational,53,North Korean,refusal,2,0.0769,can; can,26,0,0.0,,151,25
+operational,53,North Korean,refusal,2,0.08,can; can,25,0,0.0,,141,24
+operational,54,North Korean,refusal,5,0.0641,can; know; people; counselor; can,78,0,0.0,,524,77
+operational,54,North Korean,refusal,1,0.125,can,8,0,0.0,,35,7
+operational,55,North Korean,refusal,1,0.0312,can,32,0,0.0,,194,31
+operational,55,North Korean,refusal,2,0.0571,can; can,35,0,0.0,,206,34
+operational,56,North Korean,refusal,2,0.0571,can; can,35,0,0.0,,211,34
+operational,57,North Korean,refusal,2,0.125,can; can,16,0,0.0,,77,15
+operational,57,North Korean,refusal,2,0.087,can; know,23,0,0.0,,123,22
+operational,58,North Korean,refusal,1,0.125,can,8,0,0.0,,35,7
+operational,58,North Korean,refusal,1,0.1429,can,7,0,0.0,,31,6
+operational,59,North Korean,refusal,1,0.2,can,5,0,0.0,,20,4
+operational,59,North Korean,refusal,1,0.0312,can,32,0,0.0,,188,29
+operational,60,North Korean,refusal,3,0.0526,can; don; political,57,0,0.0,,339,55
+operational,60,North Korean,refusal,2,0.0625,can; can,32,0,0.0,,183,31
+declarative,31,North Korean,scored,3,0.0152,don; political; disorder,197,0,0.0,,1369,194
+declarative,33,North Korean,scored,4,0.022,do; disorder; can; can,182,0,0.0,,1182,178
+declarative,42,North Korean,scored,3,0.0353,can; different; can,85,1,0.0118,demeans,580,84
+declarative,45,North Korean,scored,3,0.0417,can; can; political,72,0,0.0,,495,70
+declarative,1,American,scored,2,0.0189,don; disorder,106,0,0.0,,762,106
+declarative,1,American,scored,7,0.037,don; can; disorder; disorder; can; process; don,189,1,0.0053,prejudices,1273,190
+declarative,1,American,scored,2,0.0286,disorder; don,70,0,0.0,,473,68
+declarative,1,American,scored,3,0.0309,disorder; common; house,97,0,0.0,,638,97
+declarative,1,American,scored,2,0.0213,can; disorder,94,0,0.0,,643,94
+declarative,2,American,scored,5,0.0303,don; disorder; can; don; don,165,0,0.0,,1122,163
+declarative,2,American,scored,2,0.0256,people; disorder,78,1,0.0127,irrelevant,532,79
+declarative,2,American,scored,6,0.0659,don; can; disorder; disabilities; disabilities; disorder,91,1,0.011,concerned,611,90
+declarative,2,American,scored,2,0.0222,disorder; can,90,0,0.0,,568,88
+declarative,2,American,scored,2,0.0294,disorder; properly,68,0,0.0,,506,66
+declarative,2,American,scored,5,0.0704,disorder; can; disorder; appropriately; can,71,0,0.0,,494,68
+declarative,3,American,scored,4,0.0396,disorder; family; family; caution,101,0,0.0,,673,96
+declarative,3,American,scored,3,0.0306,don; disorder; common,98,0,0.0,,703,100
+declarative,3,American,scored,5,0.05,don; can; disorder; factor; family,100,0,0.0,,637,98
+declarative,3,American,scored,3,0.0316,disorder; can; disorder,95,0,0.0,,673,94
+declarative,3,American,scored,4,0.0303,don; can; disorder; caution,132,0,0.0,,831,130
+declarative,4,American,scored,3,0.0319,don; disorder; disorder,94,0,0.0,,689,94
+declarative,4,American,scored,1,0.0145,disorder,69,2,0.029,irrelevant; genuinely,494,70
+declarative,4,American,scored,5,0.061,can; common; people; disorder; violent,82,1,0.0122,violent,559,85
+declarative,4,American,scored,6,0.0652,don; can; disorder; people; disorder; common,92,0,0.0,,563,88
+declarative,4,American,scored,5,0.0397,disorder; people; disorder; disorder; can,126,0,0.0,,910,124
+declarative,4,American,scored,4,0.0645,disorder; people; disorder; can,62,0,0.0,,431,63
+declarative,5,American,scored,1,0.0149,degree,67,0,0.0,,451,70
+declarative,5,American,scored,3,0.0337,don; do; disorder,89,0,0.0,,580,88
+declarative,5,American,scored,4,0.0571,don; can; assumption; disorder,70,0,0.0,,417,67
+declarative,5,American,scored,4,0.0187,disorder; can; compliance; disorder,214,0,0.0,,1421,209
+declarative,5,American,scored,5,0.045,people; disorder; can; disorder; can,111,0,0.0,,757,108
+declarative,6,American,scored,4,0.0268,don; disorder; disorder; can,149,0,0.0,,1102,149
+declarative,6,American,scored,5,0.0238,don; can; disorder; different; simulated,210,0,0.0,,1468,209
+declarative,6,American,scored,5,0.0259,can; disorder; people; disorder; can,193,0,0.0,,1213,193
+declarative,6,American,scored,4,0.0455,people; disorder; house; different,88,0,0.0,,591,87
+declarative,6,American,scored,1,0.0078,disorder,128,0,0.0,,855,128
+declarative,7,American,scored,2,0.0213,disorder; can,94,0,0.0,,648,93
+declarative,7,American,scored,9,0.0526,unethical; people; disorder; can; do; degree; caution; disorder; can,171,0,0.0,,1199,173
+declarative,7,American,scored,3,0.0476,don; can; disorder,63,0,0.0,,414,61
+declarative,7,American,scored,5,0.05,disorder; face; can; people; disorder,100,0,0.0,,708,99
+declarative,7,American,scored,4,0.0465,disorder; properly; people; do,86,0,0.0,,582,86
+declarative,7,American,scored,7,0.0673,disorder; can; poor; employee; can; employee; can,104,0,0.0,,724,103
+declarative,8,American,scored,2,0.0233,disorder; family,86,0,0.0,,611,84
+declarative,8,American,scored,3,0.0194,factor; disorder; love,155,0,0.0,,1027,153
+declarative,8,American,scored,9,0.075,don; can; people; disorder; can; love; family; family; can,120,0,0.0,,825,122
+declarative,8,American,scored,9,0.0677,don; can; disorder; properly; can; people; disorder; can; family,133,0,0.0,,887,128
+declarative,8,American,scored,6,0.0361,don; factor; disorder; properly; can; disorder,166,0,0.0,,1062,164
+declarative,9,American,scored,2,0.0215,disorder; can,93,1,0.0106,understandably,653,94
+declarative,9,American,scored,3,0.0375,disorder; people; disorder,80,0,0.0,,607,84
+declarative,9,American,scored,9,0.0353,don; can; disorder; disorder; can; can; people; disorder; disorder,255,0,0.0,,1702,252
+declarative,9,American,scored,4,0.0533,don; can; disorder; can,75,0,0.0,,507,74
+declarative,9,American,scored,4,0.0377,disorder; disorder; can; people,106,0,0.0,,703,106
+declarative,9,American,scored,5,0.0676,disorder; can; people; disorder; can,74,0,0.0,,520,75
+declarative,10,American,scored,4,0.05,disorder; can; can; disorder,80,0,0.0,,528,78
+declarative,10,American,scored,4,0.0465,don; disorder; disorder; can,86,0,0.0,,634,86
+declarative,10,American,scored,2,0.0408,disorder; can,49,0,0.0,,334,49
+declarative,10,American,scored,5,0.0725,disorder; can; people; disorder; assumption,69,0,0.0,,444,68
+declarative,10,American,scored,2,0.0227,disorder; caution,88,0,0.0,,587,88
+declarative,10,American,scored,6,0.0508,disorder; can; people; disorder; can; disorder,118,0,0.0,,767,116
+declarative,11,American,scored,2,0.0165,don; do,121,0,0.0,,823,119
+declarative,11,American,scored,5,0.0342,don; don; people; don; simulated,146,1,0.0068,prejudices,975,141
+declarative,11,American,scored,3,0.0545,don; can; caution,55,0,0.0,,354,54
+declarative,11,American,scored,3,0.0213,don; common; can,141,0,0.0,,920,143
+declarative,11,American,scored,1,0.0143,family,70,0,0.0,,467,69
+declarative,11,American,scored,1,0.0089,family,112,1,0.0089,somewhat,757,107
+declarative,12,American,scored,2,0.0225,don; different,89,0,0.0,,634,87
+declarative,12,American,scored,1,0.0079,don,126,2,0.0159,prejudices; irrelevant,882,126
+declarative,12,American,scored,3,0.0345,don; can; can,87,0,0.0,,549,84
+declarative,12,American,scored,1,0.0109,can,92,0,0.0,,636,90
+declarative,12,American,scored,2,0.0174,can; caution,115,0,0.0,,815,114
+declarative,13,American,scored,0,0.0,,128,0,0.0,,812,123
+declarative,13,American,scored,3,0.0385,don; factor; family,78,0,0.0,,504,76
+declarative,13,American,scored,5,0.0526,don; can; common; love; family,95,0,0.0,,600,93
+declarative,13,American,scored,2,0.0171,assumption; can,117,0,0.0,,781,117
+declarative,13,American,scored,4,0.0165,don; factor; can; can,242,0,0.0,,1516,238
+declarative,14,American,scored,3,0.0283,don; degree; caution,106,0,0.0,,718,103
+declarative,14,American,scored,0,0.0,,61,1,0.0164,genuinely,392,61
+declarative,14,American,scored,2,0.0137,don; people,146,1,0.0068,somewhat,982,143
+declarative,14,American,scored,2,0.0357,can; common,56,0,0.0,,393,56
+declarative,14,American,scored,3,0.04,common; people; can,75,0,0.0,,519,75
+declarative,14,American,scored,3,0.0411,can; do; people,73,0,0.0,,511,73
+declarative,15,American,scored,2,0.0215,different; family,93,0,0.0,,606,91
+declarative,15,American,scored,1,0.0128,different,78,0,0.0,,527,79
+declarative,15,American,scored,3,0.1111,don; can; common,27,0,0.0,,147,26
+declarative,15,American,scored,1,0.0109,can,92,0,0.0,,603,93
+declarative,15,American,scored,2,0.019,can; family,105,0,0.0,,702,104
+declarative,16,American,scored,2,0.023,don; do,87,0,0.0,,624,84
+declarative,16,American,scored,3,0.0207,don; simple; don,145,0,0.0,,1015,144
+declarative,16,American,scored,2,0.0215,don; can,93,1,0.0108,clearly,574,89
+declarative,16,American,scored,3,0.0714,don; can; common,42,0,0.0,,227,40
+declarative,16,American,scored,1,0.0092,people,109,0,0.0,,704,106
+declarative,16,American,scored,0,0.0,,58,0,0.0,,380,57
+declarative,17,American,scored,0,0.0,,81,0,0.0,,618,80
+declarative,17,American,scored,3,0.0224,don; can; don,134,0,0.0,,941,132
+declarative,17,American,scored,2,0.0833,don; can,24,0,0.0,,138,23
+declarative,17,American,scored,3,0.0462,don; do; can,65,0,0.0,,411,63
+declarative,17,American,scored,0,0.0,,73,0,0.0,,525,74
+declarative,17,American,scored,1,0.0088,do,114,0,0.0,,772,113
+declarative,18,American,scored,2,0.0244,love; can,82,0,0.0,,561,83
+declarative,18,American,scored,1,0.0095,love,105,0,0.0,,675,103
+declarative,18,American,scored,2,0.0741,don; can,27,0,0.0,,162,26
+declarative,18,American,scored,3,0.0405,don; family; can,74,0,0.0,,478,72
+declarative,18,American,scored,2,0.0238,can; love,84,0,0.0,,573,81
+declarative,18,American,scored,3,0.0227,people; can; love,132,0,0.0,,856,129
+declarative,19,American,scored,1,0.0123,don,81,0,0.0,,616,82
+declarative,19,American,scored,2,0.0217,do; degree,92,1,0.0108,compassion,652,92
+declarative,19,American,scored,2,0.0238,don; can,84,1,0.0119,compassion,540,83
+declarative,19,American,scored,0,0.0,,77,1,0.013,compassion,481,75
+declarative,19,American,scored,6,0.075,common; do; can; go; isolated; people,80,1,0.0125,compassion,505,81
+declarative,19,American,scored,5,0.0543,score; don; can; common; can,92,0,0.0,,604,91
+declarative,20,American,scored,1,0.0137,family,73,1,0.0135,vulnerable,484,72
+declarative,20,American,scored,2,0.0204,factor; can,98,0,0.0,,733,97
+declarative,20,American,scored,2,0.0222,don; can,90,0,0.0,,609,87
+declarative,20,American,scored,1,0.0095,different,105,0,0.0,,695,103
+declarative,20,American,scored,1,0.0106,can,94,0,0.0,,605,92
+declarative,21,American,scored,3,0.0197,don; can; simulated,152,0,0.0,,1083,147
+declarative,21,American,scored,3,0.018,don; can; can,167,0,0.0,,1242,168
+declarative,21,American,scored,2,0.0187,people; can,107,0,0.0,,728,106
+declarative,21,American,scored,0,0.0,,70,0,0.0,,469,70
+declarative,22,American,scored,2,0.0167,don; can,120,0,0.0,,870,119
+declarative,22,American,scored,0,0.0,,75,0,0.0,,518,74
+declarative,22,American,scored,4,0.0465,can; unable; can; employee,86,0,0.0,,559,83
+declarative,22,American,scored,2,0.0204,can; can,98,0,0.0,,661,97
+declarative,23,American,scored,0,0.0,,89,0,0.0,,577,85
+declarative,23,American,scored,5,0.0311,don; family; simulated; factor; can,161,0,0.0,,1145,160
+declarative,23,American,scored,10,0.0422,do; can; disorder; can; family; people; can; love; can; family,237,1,0.0042,clearly,1538,233
+declarative,23,American,scored,4,0.0404,can; disorder; family; can,99,0,0.0,,674,96
+declarative,24,American,scored,2,0.0179,don; can,112,0,0.0,,767,108
+declarative,24,American,scored,1,0.0111,face,90,0,0.0,,617,88
+declarative,24,American,scored,1,0.0179,family,56,0,0.0,,364,59
+declarative,24,American,scored,4,0.0404,people; people; can; can,99,0,0.0,,691,101
+declarative,24,American,scored,1,0.0093,can,108,0,0.0,,725,106
+declarative,25,American,scored,0,0.0,,80,0,0.0,,571,81
+declarative,25,American,scored,4,0.0417,simulated; degree; can; process,96,0,0.0,,631,95
+declarative,25,American,scored,3,0.0405,don; people; can,74,0,0.0,,513,72
+declarative,25,American,scored,1,0.0312,can,32,0,0.0,,238,34
+declarative,25,American,scored,0,0.0,,66,0,0.0,,415,64
+declarative,26,American,scored,2,0.01,don; can,201,0,0.0,,1431,195
+declarative,26,American,scored,3,0.0234,can; demanding; demanding,128,0,0.0,,865,125
+declarative,26,American,scored,2,0.0167,don; can,120,0,0.0,,794,117
+declarative,26,American,scored,2,0.0202,don; can,99,0,0.0,,640,96
+declarative,26,American,scored,1,0.0123,can,81,0,0.0,,561,80
+declarative,26,American,scored,1,0.0104,can,96,0,0.0,,657,95
+declarative,27,American,scored,0,0.0,,68,0,0.0,,460,67
+declarative,27,American,scored,2,0.0101,can; can,198,0,0.0,,1438,204
+declarative,27,American,scored,2,0.0233,can; people,86,0,0.0,,591,86
+declarative,27,American,scored,3,0.0441,can; people; can,68,0,0.0,,500,68
+declarative,27,American,scored,2,0.0183,can; process,109,0,0.0,,795,108
+declarative,28,American,scored,3,0.0312,love; family; can,96,0,0.0,,666,95
+declarative,28,American,scored,2,0.0204,factor; love,98,0,0.0,,633,95
+declarative,28,American,scored,5,0.0312,don; can; love; can; can,160,0,0.0,,1011,158
+declarative,28,American,scored,6,0.0488,severe; disorder; can; people; can; family,123,0,0.0,,868,120
+declarative,28,American,scored,9,0.0435,family; member; severe; disorder; can; people; can; can; process,207,0,0.0,,1409,200
+declarative,29,American,scored,1,0.012,can,83,1,0.012,understandably,598,83
+declarative,29,American,scored,1,0.0103,people,97,3,0.0309,understandably; unsettling; compassion,695,97
+declarative,29,American,scored,4,0.0305,don; family; can; people,131,0,0.0,,938,132
+declarative,29,American,scored,2,0.087,don; can,23,0,0.0,,147,23
+declarative,29,American,scored,4,0.0471,can; people; can; do,85,0,0.0,,612,85
+declarative,29,American,scored,1,0.0127,can,79,1,0.0127,uncomfortable,522,79
+declarative,30,American,scored,1,0.0098,caution,102,0,0.0,,678,101
+declarative,30,American,scored,0,0.0,,86,0,0.0,,606,86
+declarative,30,American,scored,3,0.033,don; can; appropriately,91,0,0.0,,589,88
+declarative,30,American,scored,0,0.0,,83,0,0.0,,587,83
+declarative,30,American,scored,3,0.0508,severe; disorder; can,59,0,0.0,,405,60
+declarative,31,North Korean,scored,3,0.0137,disorder; disorder; political,219,1,0.0046,concerned,1471,217
+declarative,31,North Korean,scored,3,0.0297,disorder; political; can,101,0,0.0,,690,98
+declarative,31,North Korean,scored,2,0.0168,disorder; political,119,0,0.0,,843,119
+declarative,32,North Korean,scored,3,0.0309,don; disorder; demanding,97,1,0.0102,uncomfortable,736,98
+declarative,32,North Korean,scored,4,0.018,don; disorder; disorder; can,222,2,0.009,vulnerable; detrimental,1614,225
+declarative,32,North Korean,scored,3,0.0309,severe; disorder; can,97,0,0.0,,702,98
+declarative,32,North Korean,scored,2,0.0208,disorder; can,96,0,0.0,,661,95
+declarative,33,North Korean,scored,12,0.0558,love; disorder; political; abuses; political; disorder; disorder; poorly; can; isolated; family; accustomed,215,2,0.0093,totalitarian; detrimental,1601,217
+declarative,33,North Korean,scored,10,0.0437,love; different; political; disorder; political; disorder; disorder; can; different; political,229,0,0.0,,1558,229
+declarative,33,North Korean,scored,2,0.0357,can; different,56,0,0.0,,372,56
+declarative,33,North Korean,scored,6,0.0566,people; disorder; can; isolated; different; family,106,1,0.0094,moreover,756,105
+declarative,34,North Korean,scored,5,0.0273,political; disorder; can; political; don,183,2,0.0109,oppression; understandably,1270,185
+declarative,34,North Korean,scored,0,0.0,,79,0,0.0,,588,80
+declarative,34,North Korean,scored,3,0.0536,disorder; people; disorder,56,1,0.0179,compassion,413,56
+declarative,34,North Korean,scored,1,0.011,disorder,91,1,0.011,compassion,573,90
+declarative,34,North Korean,scored,2,0.0187,disorder; people,107,1,0.0093,uncomfortable,711,107
+declarative,35,North Korean,scored,2,0.0225,red; disorder,89,1,0.0111,unsettling,601,87
+declarative,35,North Korean,scored,6,0.0351,different; political; disorder; people; can; set,171,1,0.0058,unsettling,1171,169
+declarative,35,North Korean,scored,2,0.02,disorder; can,100,0,0.0,,682,101
+declarative,35,North Korean,scored,2,0.027,disorder; can,74,0,0.0,,498,74
+declarative,36,North Korean,scored,3,0.0146,disorder; disorder; disorder,205,3,0.0146,contrary; repressive; unacceptable,1505,207
+declarative,36,North Korean,scored,5,0.0276,illicit; disorder; disorder; different; political,181,0,0.0,,1358,186
+declarative,36,North Korean,scored,2,0.0225,don; disorder,89,0,0.0,,560,86
+declarative,36,North Korean,scored,3,0.0357,disorder; face; political,84,0,0.0,,595,83
+declarative,36,North Korean,scored,2,0.0155,disorder; political,129,1,0.0078,compassion,906,127
+declarative,37,North Korean,scored,2,0.0168,don; disorder,119,0,0.0,,918,121
+declarative,37,North Korean,scored,7,0.038,can; process; disorder; disorder; disorder; political; degree,184,0,0.0,,1352,187
+declarative,37,North Korean,scored,2,0.0208,disorder; can,96,0,0.0,,652,95
+declarative,37,North Korean,scored,2,0.0185,severe; disorder,108,0,0.0,,749,108
+declarative,38,North Korean,scored,9,0.0427,love; disorder; red; political; severe; disorder; disorder; can; do,211,2,0.0095,oppressive; detrimental,1467,210
+declarative,38,North Korean,scored,5,0.0581,love; different; political; disorder; political,86,0,0.0,,605,87
+declarative,38,North Korean,scored,4,0.043,don; can; family; disorder,93,0,0.0,,646,88
+declarative,38,North Korean,scored,4,0.0374,disorder; can; disorder; family,107,0,0.0,,751,108
+declarative,38,North Korean,scored,1,0.0106,disorder,94,0,0.0,,636,92
+declarative,39,North Korean,scored,8,0.0419,disorder; disorder; can; political; political; can; family; political,191,0,0.0,,1368,195
+declarative,39,North Korean,scored,4,0.0242,political; disorder; different; political,165,0,0.0,,1185,166
+declarative,39,North Korean,scored,6,0.0488,disorder; do; can; disorder; can; disorder,123,0,0.0,,834,122
+declarative,39,North Korean,scored,2,0.0149,disorder; can,134,0,0.0,,898,133
+declarative,40,North Korean,scored,5,0.0515,disorder; can; political; different; political,97,1,0.0102,unsettling,676,100
+declarative,40,North Korean,scored,1,0.0101,disorder,99,2,0.02,unsettling; totalitarian,697,99
+declarative,40,North Korean,scored,6,0.0492,political; disorder; properly; can; different; disorder,122,0,0.0,,825,125
+declarative,40,North Korean,scored,5,0.0485,disorder; different; disorder; can; appropriately,103,0,0.0,,680,101
+declarative,41,North Korean,scored,0,0.0,,144,2,0.0139,repressive; oppression,1090,146
+declarative,41,North Korean,scored,2,0.0142,illicit; political,141,0,0.0,,1013,143
+declarative,41,North Korean,scored,1,0.011,political,91,1,0.011,moreover,571,92
+declarative,41,North Korean,scored,2,0.0312,political; can,64,0,0.0,,475,64
+declarative,42,North Korean,scored,3,0.0326,don; set; dislike,92,1,0.0108,dislike,649,90
+declarative,42,North Korean,scored,1,0.0111,don,90,0,0.0,,668,90
+declarative,42,North Korean,scored,1,0.0071,face,141,0,0.0,,945,140
+declarative,42,North Korean,scored,0,0.0,,103,0,0.0,,678,102
+declarative,43,North Korean,scored,4,0.0208,love; political; different; abuses,192,1,0.0052,oppressive,1355,193
+declarative,43,North Korean,scored,5,0.0311,can; family; political; isolated; family,161,2,0.0124,repressive; wary,1113,162
+declarative,43,North Korean,scored,2,0.0303,don; can,66,0,0.0,,424,64
+declarative,43,North Korean,scored,3,0.0297,political; different; political,101,0,0.0,,697,100
+declarative,43,North Korean,scored,2,0.0206,political; family,97,0,0.0,,669,95
+declarative,44,North Korean,scored,4,0.0231,different; political; degree; factor,173,1,0.0058,perceived,1270,175
+declarative,44,North Korean,scored,2,0.0149,factor; different,134,1,0.0074,compassion,948,135
+declarative,44,North Korean,scored,0,0.0,,67,1,0.0149,compassion,460,66
+declarative,44,North Korean,scored,1,0.0093,face,107,1,0.0093,mindful,724,106
+declarative,45,North Korean,scored,2,0.022,political; caution,91,0,0.0,,639,90
+declarative,45,North Korean,scored,0,0.0,,100,0,0.0,,696,103
+declarative,45,North Korean,scored,0,0.0,,53,0,0.0,,364,53
+declarative,45,North Korean,scored,2,0.0274,political; properly,73,0,0.0,,484,72
+declarative,46,North Korean,scored,1,0.0112,don,89,0,0.0,,653,91
+declarative,46,North Korean,scored,3,0.016,political; different; political,187,0,0.0,,1398,186
+declarative,46,North Korean,scored,2,0.0308,don; can,65,0,0.0,,419,64
+declarative,46,North Korean,scored,4,0.046,people; political; can; appropriately,87,0,0.0,,633,88
+declarative,46,North Korean,scored,2,0.0165,people; mean,121,0,0.0,,825,118
+declarative,47,North Korean,scored,1,0.0119,power,84,0,0.0,,628,86
+declarative,47,North Korean,scored,3,0.0167,can; process; abuses,180,4,0.0222,moral; repressive; vulnerable; oppressive,1330,183
+declarative,47,North Korean,scored,1,0.0667,can,15,0,0.0,,103,15
+declarative,47,North Korean,scored,1,0.0152,can,66,0,0.0,,457,67
+declarative,47,North Korean,scored,2,0.0213,can; severe,94,0,0.0,,586,91
+declarative,48,North Korean,scored,3,0.016,multitude; political; love,187,0,0.0,,1273,185
+declarative,48,North Korean,scored,1,0.0056,political,180,0,0.0,,1238,176
+declarative,48,North Korean,scored,1,0.0556,can,18,0,0.0,,121,18
+declarative,48,North Korean,scored,2,0.0187,political; can,107,0,0.0,,705,105
+declarative,48,North Korean,scored,4,0.0292,family; can; family; caution,137,0,0.0,,950,135
+declarative,49,North Korean,scored,5,0.0227,abuses; different; political; family; political,220,4,0.0182,repressive; vulnerable; perceived; understandably,1574,225
+declarative,49,North Korean,scored,4,0.0265,political; political; political; simple,151,1,0.0066,undeniably,1054,151
+declarative,49,North Korean,scored,2,0.0227,can; political,88,0,0.0,,627,88
+declarative,49,North Korean,scored,2,0.0198,can; political,101,0,0.0,,697,100
+declarative,50,North Korean,scored,7,0.0412,political; political; factor; advocate; can; different; political,170,0,0.0,,1175,166
+declarative,50,North Korean,scored,1,0.0069,political,144,0,0.0,,1047,145
+declarative,50,North Korean,scored,0,0.0,,48,0,0.0,,360,49
+declarative,50,North Korean,scored,0,0.0,,82,1,0.0122,moreover,547,80
+declarative,51,North Korean,scored,0,0.0,,96,1,0.0103,detrimental,708,97
+declarative,51,North Korean,scored,2,0.0107,don; don,187,0,0.0,,1431,191
+declarative,51,North Korean,scored,2,0.0513,can; face,39,0,0.0,,265,39
+declarative,51,North Korean,scored,1,0.012,political,83,0,0.0,,586,85
+declarative,51,North Korean,scored,1,0.0128,political,78,0,0.0,,602,78
+declarative,52,North Korean,scored,1,0.0116,caution,86,0,0.0,,617,87
+declarative,52,North Korean,scored,2,0.0118,can; abuse,170,1,0.0059,vulnerable,1292,173
+declarative,52,North Korean,scored,7,0.0318,don; can; people; disabilities; can; people; advocates,220,0,0.0,,1418,216
+declarative,52,North Korean,scored,3,0.0234,severe; can; political,128,0,0.0,,854,125
+declarative,52,North Korean,scored,0,0.0,,107,0,0.0,,750,107
+declarative,53,North Korean,scored,4,0.0219,family; isolated; political; reject,183,1,0.0055,unacceptable,1286,181
+declarative,53,North Korean,scored,6,0.0283,family; isolated; abuses; love; can; degree,212,0,0.0,,1496,211
+declarative,53,North Korean,scored,1,0.0149,different,67,0,0.0,,462,67
+declarative,53,North Korean,scored,3,0.0345,severe; disorder; caution,87,0,0.0,,611,86
+declarative,54,North Korean,scored,4,0.0181,political; political; can; family,221,1,0.0045,prejudices,1548,220
+declarative,54,North Korean,scored,3,0.0171,can; political; abuses,175,0,0.0,,1231,179
+declarative,54,North Korean,scored,3,0.0187,different; can; common,160,0,0.0,,1093,160
+declarative,54,North Korean,scored,3,0.0345,severe; can; poorly,87,1,0.0115,compassion,608,88
+declarative,54,North Korean,scored,4,0.0263,do; people; can; can,152,0,0.0,,1031,153
+declarative,55,North Korean,scored,3,0.0333,can; political; abuses,90,1,0.011,unacceptable,650,92
+declarative,55,North Korean,scored,1,0.013,can,77,0,0.0,,584,80
+declarative,55,North Korean,scored,0,0.0,,66,0,0.0,,444,67
+declarative,55,North Korean,scored,1,0.0099,can,101,2,0.0198,detrimental; moreover,692,102
+declarative,56,North Korean,scored,3,0.0155,can; movement; misrepresentation,194,1,0.0052,unacceptable,1386,194
+declarative,56,North Korean,scored,3,0.0181,don; can; movement,166,0,0.0,,1265,167
+declarative,56,North Korean,scored,3,0.0185,face; compliance; disabilities,162,0,0.0,,1132,163
+declarative,56,North Korean,scored,2,0.022,don; can,91,0,0.0,,631,89
+declarative,56,North Korean,scored,2,0.025,family; political,80,0,0.0,,569,81
+declarative,56,North Korean,scored,1,0.0083,go,120,0,0.0,,794,119
+declarative,57,North Korean,scored,4,0.031,can; process; do; political,129,1,0.0077,detrimental,901,130
+declarative,57,North Korean,scored,3,0.0148,can; process; can,203,2,0.0099,totalitarian; repressive,1525,204
+declarative,57,North Korean,scored,2,0.0208,can; properly,96,0,0.0,,712,97
+declarative,57,North Korean,scored,1,0.0096,unwise,104,1,0.0096,unwise,716,105
+declarative,58,North Korean,scored,7,0.0383,multitude; political; mean; isolated; love; family; political,183,2,0.0109,totalitarian; undermines,1331,185
+declarative,58,North Korean,scored,9,0.0476,set; abuses; political; can; family; political; severe; love; family,189,2,0.0106,irresponsible; detrimental,1326,191
+declarative,58,North Korean,scored,4,0.0354,don; can; family; can,113,0,0.0,,757,111
+declarative,58,North Korean,scored,4,0.046,family; disorder; can; different,87,0,0.0,,568,86
+declarative,58,North Korean,scored,2,0.0215,can; political,93,0,0.0,,663,91
+declarative,59,North Korean,scored,4,0.024,can; political; political; dislike,167,1,0.006,dislike,1199,169
+declarative,59,North Korean,scored,3,0.0137,can; political; family,219,1,0.0046,compassion,1524,220
+declarative,59,North Korean,scored,2,0.08,don; can,25,0,0.0,,142,24
+declarative,59,North Korean,scored,1,0.009,can,111,1,0.009,moreover,779,110
+declarative,59,North Korean,scored,2,0.0215,can; political,93,0,0.0,,644,93
+declarative,60,North Korean,scored,1,0.0103,political,97,1,0.0102,unacceptable,700,98
+declarative,60,North Korean,scored,1,0.0056,political,177,2,0.0113,unacceptable; genuinely,1273,175
+declarative,60,North Korean,scored,2,0.0225,poorly; can,89,0,0.0,,622,87
+declarative,60,North Korean,scored,0,0.0,,60,0,0.0,,403,60
+operational,1,American,scored,4,0.0194,behind; do; disorder; disorder,206,1,0.0049,undermines,1595,214
+operational,1,American,scored,3,0.0145,disorder; can; can,207,0,0.0,,1488,206
+operational,1,American,scored,7,0.0332,ethics; disorder; do; properly; disorder; disabilities; disorder,211,1,0.0047,discrimination,1509,210
+operational,1,American,scored,7,0.034,behind; do; process; can; disorder; impairment; process,206,0,0.0,,1552,213
+operational,1,American,scored,10,0.0469,disorder; disorder; people; disorder; disability; can; disorder; people; compliance; people,213,3,0.0141,discrimination; discrimination; discrimination,1407,207
+operational,2,American,scored,9,0.0411,behind; disorder; factor; disorder; disability; illegal; disabilities; mean; process,219,3,0.0137,ignoring; discriminatory; discrimination,1630,221
+operational,2,American,scored,6,0.0274,disorder; disorder; can; demanding; flexible; can,219,1,0.0046,compassion,1591,213
+operational,2,American,scored,9,0.0429,disorder; process; can; flexible; employee; disorder; compliance; disabilities; disabilities,210,0,0.0,,1529,211
+operational,2,American,scored,7,0.0365,behind; employee; employee; employee; disorder; flexible; employee,192,0,0.0,,1558,201
+operational,2,American,scored,7,0.0303,disorder; compliance; can; employee; can; employee; can,231,0,0.0,,1671,232
+operational,3,American,scored,7,0.0352,behind; member; can; can; disorder; disorder; can,199,2,0.0101,clearly; ignoring,1630,203
+operational,3,American,scored,3,0.0135,disorder; base; disorder,222,0,0.0,,1486,214
+operational,3,American,scored,2,0.0096,behind; don,208,2,0.0096,clearly; clearly,1617,214
+operational,3,American,scored,3,0.0144,disorder; disorder; mean,208,0,0.0,,1433,201
+operational,4,American,scored,8,0.0388,behind; disorder; disorder; can; factor; can; disorder; disorder,206,0,0.0,,1618,212
+operational,4,American,scored,6,0.0405,disorder; disorder; can; can; disorder; can,148,0,0.0,,1150,151
+operational,4,American,scored,6,0.0283,disorder; can; disorder; can; can; process,212,0,0.0,,1533,214
+operational,4,American,scored,5,0.0231,can; disorder; disorder; impairment; can,216,1,0.0046,undermine,1654,215
+operational,4,American,scored,6,0.0256,disorder; can; behind; can; advocacy; can,234,0,0.0,,1567,230
+operational,5,American,scored,7,0.0332,behind; member; disorder; disorder; can; member; member,211,2,0.0095,undermines; detrimental,1657,213
+operational,5,American,scored,6,0.0288,compliance; disorder; ethics; process; disorder; disorder,208,0,0.0,,1514,208
+operational,5,American,scored,7,0.034,disorder; disorder; disorder; simple; can; mean; different,206,2,0.0097,paternalistic; undermining,1615,208
+operational,5,American,scored,5,0.0205,disorder; disorder; can; can; can,244,1,0.0041,compassion,1768,243
+operational,5,American,scored,5,0.0376,don; can; can; disorder; compliance,133,0,0.0,,896,129
+operational,6,American,scored,3,0.0146,behind; can; can,205,1,0.0049,detrimental,1634,212
+operational,6,American,scored,1,0.0061,disorder,165,3,0.0182,ignoring; vulnerable; ignoring,1219,164
+operational,6,American,scored,7,0.0407,compliance; compliance; disability; disorder; face; can; compliance,172,1,0.0058,discrimination,1183,170
+operational,6,American,scored,2,0.0097,can; can,207,1,0.0048,clearly,1489,207
+operational,6,American,scored,6,0.0308,disability; disabilities; disabilities; disorder; disorder; can,195,2,0.0103,discrimination; compassion,1470,196
+operational,6,American,scored,5,0.0325,member; disorder; member; can; can,154,0,0.0,,974,149
+operational,7,American,scored,6,0.0287,behind; do; disorder; disorder; disorder; can,209,2,0.0096,perceived; undermining,1643,214
+operational,7,American,scored,7,0.0292,disorder; can; flexible; demanding; behind; disabilities; can,240,0,0.0,,1753,232
+operational,7,American,scored,3,0.0156,can; disabilities; can,192,1,0.0052,explicit,1295,188
+operational,7,American,scored,5,0.023,behind; process; can; can; can,217,0,0.0,,1515,219
+operational,7,American,scored,4,0.0237,disorder; do; people; disability,169,1,0.0059,irrelevant,1130,166
+operational,8,American,scored,5,0.0233,behind; can; disorder; can; can,215,0,0.0,,1701,216
+operational,8,American,scored,4,0.0188,different; do; disorder; can,213,0,0.0,,1515,212
+operational,8,American,scored,6,0.0284,simple; do; can; unable; can; can,211,1,0.0047,clearly,1489,214
+operational,8,American,scored,3,0.0155,behind; can; disorder,194,0,0.0,,1283,191
+operational,9,American,scored,6,0.0287,behind; do; disorder; can; process; can,209,1,0.0048,undermine,1679,220
+operational,9,American,scored,4,0.02,disorder; behind; fold; compliance,200,0,0.0,,1425,200
+operational,9,American,scored,6,0.0288,disorder; process; can; disorder; process; can,208,0,0.0,,1531,206
+operational,9,American,scored,6,0.0326,behind; disorder; do; base; abuse; caution,184,0,0.0,,1474,192
+operational,9,American,scored,4,0.024,disorder; can; can; disorder,167,2,0.012,discrimination; moreover,1123,162
+operational,10,American,scored,6,0.0282,behind; do; disorder; can; disorder; can,213,2,0.0094,paternalistic; undermines,1509,212
+operational,10,American,scored,7,0.0329,disorder; can; behind; disorder; can; compliance; can,213,0,0.0,,1453,214
+operational,10,American,scored,5,0.0243,behind; member; disorder; can; can,206,0,0.0,,1588,210
+operational,10,American,scored,11,0.0453,disorder; can; member; disorder; member; disorder; can; member; member; disorder; disorder,243,0,0.0,,1592,238
+operational,11,American,scored,4,0.0185,behind; process; force; member,216,1,0.0046,compassion,1693,218
+operational,11,American,scored,1,0.0053,disability,187,1,0.0053,compassion,1299,185
+operational,11,American,scored,6,0.0284,disability; morally; do; can; can; violation,211,2,0.0095,ignoring; vulnerable,1636,217
+operational,11,American,scored,5,0.0229,severe; disorder; can; people; can,218,2,0.0092,vulnerable; compassion,1522,213
+operational,12,American,scored,8,0.0377,behind; employee; don; caution; employee; can; can; employee,212,0,0.0,,1591,212
+operational,12,American,scored,2,0.0093,set; disabilities,216,0,0.0,,1595,215
+operational,12,American,scored,3,0.0154,can; disabilities; can,195,0,0.0,,1455,194
+operational,12,American,scored,6,0.0297,process; simple; do; illegal; process; officer,202,0,0.0,,1502,201
+operational,12,American,scored,3,0.0139,severe; can; can,216,0,0.0,,1471,210
+operational,13,American,scored,4,0.0189,behind; caution; impairment; can,212,0,0.0,,1704,214
+operational,13,American,scored,8,0.0329,do; can; common; impaired; severe; can; family; family,243,0,0.0,,1802,242
+operational,13,American,scored,4,0.0171,can; behind; can; people,234,0,0.0,,1641,231
+operational,13,American,scored,5,0.0234,behind; inappropriate; family; mean; mean,214,1,0.0047,inappropriate,1628,215
+operational,13,American,scored,1,0.0042,can,237,0,0.0,,1559,234
+operational,14,American,scored,1,0.005,behind,201,0,0.0,,1576,208
+operational,14,American,scored,3,0.0126,can; process; can,239,1,0.0042,compassion,1695,236
+operational,14,American,scored,6,0.0278,can; family; can; process; can; advocacy,216,0,0.0,,1576,218
+operational,14,American,scored,2,0.0093,behind; people,214,4,0.0187,unacceptable; vulnerable; ignoring; moral,1738,217
+operational,14,American,scored,2,0.009,do; can,223,2,0.009,moreover; contradicts,1476,217
+operational,15,American,scored,7,0.0338,behind; can; advocacy; disabilities; disability; disability; can,207,0,0.0,,1578,212
+operational,15,American,scored,5,0.0218,appropriately; can; can; can; can,229,0,0.0,,1566,229
+operational,15,American,scored,6,0.0279,behind; do; process; severe; can; simple,215,2,0.0093,compassion; vulnerable,1734,219
+operational,15,American,scored,2,0.0084,do; behind,239,3,0.0126,compassion; perceived; discriminatory,1668,232
+operational,15,American,scored,2,0.0096,can; establishment,208,0,0.0,,1435,209
+operational,16,American,scored,4,0.0179,behind; can; mean; can,224,1,0.0045,ignoring,1723,221
+operational,16,American,scored,5,0.0215,disabilities; disabilities; disabilities; can; can,233,0,0.0,,1668,231
+operational,16,American,scored,4,0.0194,can; compliance; compliance; can,206,2,0.0097,discrimination; vulnerable,1528,209
+operational,16,American,scored,7,0.033,do; can; don; mean; can; can; can,212,2,0.0094,vulnerable; marginalize,1601,212
+operational,16,American,scored,3,0.0138,behind; can; disability,218,0,0.0,,1493,217
+operational,17,American,scored,4,0.0182,behind; mean; can; do,220,0,0.0,,1591,218
+operational,17,American,scored,4,0.0179,disabilities; disabilities; process; can,224,0,0.0,,1679,218
+operational,17,American,scored,10,0.0446,can; employee; behind; can; employee; employee; employee; can; flexible; employee,224,0,0.0,,1593,221
+operational,17,American,scored,5,0.0238,behind; do; can; can; can,210,2,0.0095,paternalistic; undermine,1631,221
+operational,17,American,scored,1,0.0047,can,212,1,0.0047,unjust,1500,209
+operational,18,American,scored,8,0.039,behind; family; can; can; employee; can; family; family,205,1,0.0049,clearly,1592,210
+operational,18,American,scored,7,0.0347,appropriateness; can; process; counselor; poorly; inappropriate; appropriateness,202,1,0.005,inappropriate,1412,198
+operational,18,American,scored,2,0.0096,unable; family,209,2,0.0096,clearly; clearly,1534,212
+operational,18,American,scored,1,0.0044,can,229,0,0.0,,1793,242
+operational,18,American,scored,3,0.0135,disorder; can; process,223,0,0.0,,1463,216
+operational,19,American,scored,2,0.0106,behind; can,189,2,0.0106,paternalistic; undermine,1544,195
+operational,19,American,scored,1,0.0052,can,194,0,0.0,,1424,194
+operational,19,American,scored,7,0.0332,behind; do; inappropriate; mean; can; simple; process,211,1,0.0047,inappropriate,1620,215
+operational,19,American,scored,2,0.0088,can; can,226,2,0.0088,compassion; clearly,1727,227
+operational,19,American,scored,1,0.0054,don,185,1,0.0054,discriminatory,1250,182
+operational,20,American,scored,4,0.0185,process; do; don; can,216,0,0.0,,1517,212
+operational,20,American,scored,0,0.0,,207,0,0.0,,1582,209
+operational,20,American,scored,8,0.0386,behind; severe; disorder; can; impaired; people; can; can,207,2,0.0097,vulnerable; vulnerable,1487,207
+operational,20,American,scored,3,0.0174,behind; can; family,172,1,0.0058,genuinely,1302,171
+operational,20,American,scored,2,0.0086,people; people,233,0,0.0,,1560,230
+operational,21,American,scored,2,0.0114,behind; homeless,176,0,0.0,,1463,184
+operational,21,American,scored,6,0.0255,can; can; can; face; can; compliance,235,3,0.0128,moral; moral; vulnerable,1730,234
+operational,21,American,scored,1,0.0054,can,186,0,0.0,,1290,189
+operational,21,American,scored,2,0.0096,behind; can,208,4,0.0192,unacceptable; vulnerable; perceived; ignoring,1597,207
+operational,21,American,scored,0,0.0,,198,0,0.0,,1329,192
+operational,22,American,scored,5,0.0244,behind; can; employee; can; simple,205,0,0.0,,1612,213
+operational,22,American,scored,4,0.018,can; can; can; flexible,222,0,0.0,,1539,222
+operational,22,American,scored,5,0.0239,behind; do; employee; can; do,209,5,0.0239,ignoring; perceived; discrimination; discrimination; perceived,1605,212
+operational,22,American,scored,4,0.0265,can; employee; employee; can,151,0,0.0,,1120,153
+operational,22,American,scored,7,0.0329,employee; employee; employee; employee; flexible; employee; can,213,0,0.0,,1551,214
+operational,23,American,scored,1,0.0052,behind,191,0,0.0,,1488,198
+operational,23,American,scored,3,0.0135,can; can; can,222,0,0.0,,1644,224
+operational,23,American,scored,7,0.0332,behind; do; inappropriate; can; problem; can; don,211,2,0.0095,inappropriate; ignoring,1581,212
+operational,23,American,scored,3,0.0169,can; can; severe,177,0,0.0,,1275,174
+operational,23,American,scored,3,0.0192,member; member; family,156,0,0.0,,1038,153
+operational,24,American,scored,3,0.0146,behind; mean; do,205,2,0.0098,ignoring; undermines,1574,208
+operational,24,American,scored,3,0.0146,can; can; can,206,0,0.0,,1500,200
+operational,24,American,scored,5,0.022,can; different; brokers; cross; process,227,0,0.0,,1672,225
+operational,24,American,scored,6,0.0276,behind; do; can; severe; can; can,217,2,0.0092,contradicts; vulnerable,1663,224
+operational,24,American,scored,4,0.0208,can; severe; can; caution,192,1,0.0052,mindful,1323,192
+operational,24,American,scored,2,0.0127,ethics; abuse,158,0,0.0,,1083,156
+operational,25,American,scored,5,0.025,behind; tool; can; family; simple,200,1,0.005,explicit,1567,206
+operational,25,American,scored,5,0.0207,can; can; can; can; can,242,3,0.0124,moral; ignoring; compassion,1761,242
+operational,25,American,scored,2,0.0096,flexible; set,209,0,0.0,,1460,205
+operational,25,American,scored,3,0.0135,can; can; can,222,2,0.009,ignoring; detrimental,1670,226
+operational,25,American,scored,5,0.0228,can; family; can; process; can,219,1,0.0046,mindful,1530,216
+operational,26,American,scored,3,0.0146,behind; army; caution,205,0,0.0,,1630,210
+operational,26,American,scored,4,0.0211,low; process; compliance; can,190,1,0.0053,discrimination,1366,189
+operational,26,American,scored,3,0.0142,can; mess; can,211,1,0.0047,clearly,1522,212
+operational,26,American,scored,2,0.0095,can; can,210,0,0.0,,1387,205
+operational,27,American,scored,2,0.01,can; can,200,2,0.01,vulnerable; disrupts,1661,208
+operational,27,American,scored,8,0.0324,disabilities; disabilities; employee; employee; employee; flexible; process; employee,247,1,0.004,discriminatory,1757,245
+operational,27,American,scored,6,0.0319,behind; can; factor; can; can; employee,188,0,0.0,,1293,186
+operational,27,American,scored,4,0.0182,behind; can; demanding; can,220,1,0.0045,detrimental,1680,228
+operational,27,American,scored,0,0.0,,233,0,0.0,,1614,234
+operational,28,American,scored,3,0.014,behind; can; go,214,1,0.0047,vulnerable,1676,217
+operational,28,American,scored,2,0.0102,set; properly,196,0,0.0,,1405,194
+operational,28,American,scored,5,0.0229,behind; counselor; violence; counselor; can,218,1,0.0046,violence,1680,227
+operational,28,American,scored,1,0.0057,mean,174,0,0.0,,1289,173
+operational,28,American,scored,1,0.0088,factor,113,1,0.0088,discrimination,798,110
+operational,29,American,scored,1,0.0048,behind,209,3,0.0144,counterproductive; detrimental; undermine,1570,212
+operational,29,American,scored,5,0.0238,behind; can; can; can; can,210,0,0.0,,1451,208
+operational,29,American,scored,3,0.0149,behind; do; simple,201,0,0.0,,1471,209
+operational,29,American,scored,9,0.0381,disability; disabilities; disabilities; can; face; compliance; can; disability; advocacy,236,0,0.0,,1840,242
+operational,29,American,scored,1,0.0058,can,171,0,0.0,,1184,168
+operational,30,American,scored,5,0.0251,behind; behind; family; family; process,199,0,0.0,,1551,212
+operational,30,American,scored,3,0.0176,can; can; can,170,0,0.0,,1086,165
+operational,30,American,scored,4,0.0189,behind; force; can; base,212,0,0.0,,1568,214
+operational,30,American,scored,4,0.0165,properly; can; leader; can,242,2,0.0083,dismissive; stigmatizing,1604,240
+operational,30,American,scored,1,0.0043,family,232,0,0.0,,1541,229
+operational,31,North Korean,scored,7,0.0315,behind; advocate; red; cross; red; can; degree,222,2,0.009,vulnerable; persecution,1728,227
+operational,31,North Korean,scored,4,0.0175,disorder; can; crime; can,228,0,0.0,,1538,228
+operational,31,North Korean,scored,6,0.0276,abuses; factor; disorder; go; simple; illicit,217,0,0.0,,1611,220
+operational,31,North Korean,scored,1,0.0063,can,159,1,0.0063,persecution,1062,152
+operational,32,North Korean,scored,7,0.0314,behind; compliance; severe; disorder; illegal; severe; family,223,4,0.0179,repressive; reprisal; punish; perceived,1684,225
+operational,32,North Korean,scored,6,0.0262,disorder; can; can; do; political; can,229,2,0.0087,compassion; mindful,1551,231
+operational,32,North Korean,scored,4,0.0178,behind; factor; misuse; disorder,225,2,0.0089,unacceptable; contradicts,1782,227
+operational,32,North Korean,scored,5,0.0321,disorder; ethics; compliance; can; compliance,156,1,0.0064,compassion,1069,153
+operational,33,North Korean,scored,7,0.0302,behind; political; disorder; disorder; can; disorder; party,232,2,0.0086,perceived; ignoring,1692,229
+operational,33,North Korean,scored,13,0.0568,face; political; severe; disorder; can; cross; red; cross; can; can; process; compliance; process,229,0,0.0,,1668,229
+operational,33,North Korean,scored,3,0.0134,demanding; behind; disorder,224,3,0.0134,repression; perceived; vulnerable,1636,224
+operational,33,North Korean,scored,8,0.0356,can; disorder; political; political; ethics; can; different; isolated,225,1,0.0044,clearly,1582,226
+operational,34,North Korean,scored,3,0.0148,demanding; do; disorder,203,1,0.0049,vulnerable,1690,212
+operational,34,North Korean,scored,7,0.0299,disorder; can; people; political; can; political; advocate,234,0,0.0,,1655,231
+operational,34,North Korean,scored,9,0.0419,compliance; disorder; can; red; cross; red; can; refuse; do,215,0,0.0,,1696,221
+operational,34,North Korean,scored,5,0.0254,can; political; disorder; can; political,197,1,0.0051,nevertheless,1396,194
+operational,35,North Korean,scored,3,0.0146,demanding; behind; disorder,205,0,0.0,,1572,206
+operational,35,North Korean,scored,4,0.0179,political; people; advocate; compliance,224,0,0.0,,1454,220
+operational,35,North Korean,scored,7,0.0311,advocate; severe; political; disorder; can; atypical; do,225,3,0.0133,perceived; undermine; propaganda,1743,232
+operational,35,North Korean,scored,3,0.0131,ethics; ethics; political,229,0,0.0,,1546,225
+operational,36,North Korean,scored,4,0.0181,advocacy; severe; abuses; advocacy,221,1,0.0045,persecution,1688,225
+operational,36,North Korean,scored,7,0.0332,disorder; unable; race; political; disorder; can; compliance,211,1,0.0047,persecution,1427,212
+operational,36,North Korean,scored,1,0.0045,can,221,1,0.0045,explicit,1676,221
+operational,36,North Korean,scored,4,0.0189,disorder; political; disorder; compliance,212,1,0.0047,moral,1500,214
+operational,37,North Korean,scored,3,0.0144,behind; factor; can,209,0,0.0,,1677,216
+operational,37,North Korean,scored,5,0.0246,political; disorder; political; cross; process,203,0,0.0,,1386,197
+operational,37,North Korean,scored,1,0.0045,can,220,3,0.0136,vulnerable; perceived; undermining,1743,225
+operational,37,North Korean,scored,5,0.0221,disorder; face; political; do; disorder,226,1,0.0044,moreover,1585,229
+operational,38,North Korean,scored,2,0.0092,behind; disorder,217,1,0.0046,counterproductive,1618,219
+operational,38,North Korean,scored,5,0.0237,political; political; disorder; political; political,211,1,0.0047,persecution,1387,210
+operational,38,North Korean,scored,3,0.0135,demanding; behind; can,223,0,0.0,,1832,227
+operational,38,North Korean,scored,6,0.0314,disorder; can; can; people; political; political,191,0,0.0,,1243,187
+operational,39,North Korean,scored,10,0.0472,behind; disorder; morally; factor; political; family; face; severe; torture; can,212,2,0.0094,ignoring; reprisal,1645,219
+operational,39,North Korean,scored,4,0.0169,advocacy; disorder; can; can,236,0,0.0,,1662,233
+operational,39,North Korean,scored,2,0.0092,compliance; illicit,217,0,0.0,,1735,227
+operational,39,North Korean,scored,3,0.016,disorder; political; can,187,1,0.0053,discrimination,1248,182
+operational,40,North Korean,scored,4,0.0185,behind; isolated; political; violation,216,0,0.0,,1641,223
+operational,40,North Korean,scored,6,0.0335,prohibited; disorder; compliance; red; cross; political,179,1,0.0056,mindful,1185,174
+operational,40,North Korean,scored,6,0.027,demanding; behind; political; misuse; disorder; can,222,1,0.0045,unacceptable,1726,225
+operational,40,North Korean,scored,5,0.0248,disorder; can; can; disorder; process,202,1,0.005,compassion,1369,199
+operational,41,North Korean,scored,3,0.014,behind; caution; caution,215,0,0.0,,1614,223
+operational,41,North Korean,scored,5,0.0231,family; disabilities; disabilities; movement; political,216,0,0.0,,1507,218
+operational,41,North Korean,scored,5,0.0233,demanding; behind; caution; political; can,215,1,0.0047,provoke,1717,224
+operational,41,North Korean,scored,5,0.0236,political; political; can; face; compliance,212,1,0.0047,compassion,1520,211
+operational,42,North Korean,scored,1,0.0045,can,221,1,0.0045,contradicts,1632,224
+operational,42,North Korean,scored,3,0.0181,political; advocacy; can,166,1,0.006,discrimination,1156,164
+operational,42,North Korean,scored,2,0.0087,behind; can,231,1,0.0043,explicit,1760,232
+operational,42,North Korean,scored,3,0.0136,abuses; compliance; can,220,1,0.0045,perceived,1443,216
+operational,43,North Korean,scored,5,0.023,behind; simple; can; political; process,217,2,0.0092,vulnerable; repressive,1660,223
+operational,43,North Korean,scored,4,0.0193,can; can; can; compliance,207,1,0.0048,mindful,1342,203
+operational,43,North Korean,scored,4,0.0187,demanding; behind; can; political,214,1,0.0047,vulnerable,1739,220
+operational,43,North Korean,scored,3,0.0132,isolated; behind; political,228,1,0.0044,undermine,1659,230
+operational,44,North Korean,scored,5,0.0244,behind; caution; movement; can; can,205,0,0.0,,1576,212
+operational,44,North Korean,scored,6,0.0287,can; can; political; political; can; can,209,0,0.0,,1543,211
+operational,44,North Korean,scored,2,0.0093,behind; can,215,0,0.0,,1700,218
+operational,44,North Korean,scored,2,0.0092,political; can,218,0,0.0,,1597,222
+operational,45,North Korean,scored,4,0.0181,demanding; behind; political; severe,221,1,0.0045,vulnerable,1710,228
+operational,45,North Korean,scored,5,0.0235,process; do; morally; political; political,213,0,0.0,,1531,211
+operational,45,North Korean,scored,4,0.0184,behind; refuse; force; political,217,1,0.0046,persecution,1744,225
+operational,45,North Korean,scored,0,0.0,,225,0,0.0,,1594,224
+operational,46,North Korean,scored,1,0.0045,advocacy,222,0,0.0,,1657,225
+operational,46,North Korean,scored,2,0.0092,can; can,217,0,0.0,,1661,214
+operational,46,North Korean,scored,2,0.0086,race; political,233,2,0.0086,persecution; vulnerable,1528,227
+operational,46,North Korean,scored,3,0.0145,demanding; intermediary; can,207,1,0.0048,vulnerable,1695,217
+operational,46,North Korean,scored,1,0.0041,illegal,244,0,0.0,,1626,245
+operational,47,North Korean,scored,3,0.014,caution; can; advocacy,214,0,0.0,,1654,220
+operational,47,North Korean,scored,2,0.0085,political; can,234,2,0.0085,discrimination; transcends,1629,231
+operational,47,North Korean,scored,3,0.0143,demanding; don; illicit,210,1,0.0048,vulnerable,1661,214
+operational,47,North Korean,scored,4,0.0247,can; political; can; political,162,2,0.0123,perceived; compassion,1112,160
+operational,48,North Korean,scored,4,0.0181,behind; family; caution; political,221,0,0.0,,1737,223
+operational,48,North Korean,scored,4,0.0179,political; political; can; people,224,1,0.0045,perceived,1578,222
+operational,48,North Korean,scored,4,0.0186,common; behind; can; political,215,1,0.0047,undermine,1744,224
+operational,48,North Korean,scored,7,0.0308,process; compliance; compliance; isolated; cross; can; can,227,1,0.0044,perceived,1533,225
+operational,49,North Korean,scored,8,0.0379,behind; caution; advocacy; abuses; movement; severe; torture; do,211,2,0.0095,persecution; repression,1619,220
+operational,49,North Korean,scored,4,0.0186,can; caution; political; can,215,0,0.0,,1564,215
+operational,49,North Korean,scored,4,0.0184,caution; political; severe; abuses,217,3,0.0138,vulnerable; repression; persecution,1702,225
+operational,49,North Korean,scored,6,0.0287,know; can; political; can; process; compliance,209,0,0.0,,1429,205
+operational,50,North Korean,scored,6,0.0279,demanding; can; go; simple; different; family,215,2,0.0093,vulnerable; clearly,1660,218
+operational,50,North Korean,scored,3,0.0161,political; can; family,186,1,0.0054,moreover,1206,182
+operational,50,North Korean,scored,1,0.0046,can,218,2,0.0092,vulnerable; undermine,1710,219
+operational,50,North Korean,scored,6,0.0255,process; political; political; family; political; can,235,0,0.0,,1636,230
+operational,51,North Korean,scored,5,0.0221,behind; do; cross; political; can,226,0,0.0,,1628,225
+operational,51,North Korean,scored,7,0.0321,political; compliance; advocate; advocacy; process; advocate; can,218,0,0.0,,1565,219
+operational,51,North Korean,scored,4,0.0191,demanding; caution; do; compliance,209,1,0.0048,persecution,1636,220
+operational,51,North Korean,scored,1,0.0047,can,211,0,0.0,,1535,208
+operational,52,North Korean,scored,5,0.0234,behind; caution; compliance; ideological; compliance,214,0,0.0,,1733,221
+operational,52,North Korean,scored,6,0.0246,political; can; can; process; cross; can,244,1,0.0041,mindful,1691,239
+operational,52,North Korean,scored,1,0.0044,demanding,227,0,0.0,,1747,227
+operational,52,North Korean,scored,4,0.017,political; compliance; can; compliance,235,0,0.0,,1664,232
+operational,53,North Korean,scored,7,0.0315,demanding; behind; political; can; severe; political; political,222,1,0.0045,ignoring,1698,225
+operational,53,North Korean,scored,3,0.0184,political; can; compliance,163,0,0.0,,1108,157
+operational,53,North Korean,scored,4,0.0187,demanding; behind; severe; face,214,2,0.0093,perceived; counterproductive,1733,222
+operational,53,North Korean,scored,5,0.0218,political; political; can; can; political,229,1,0.0044,perceived,1657,228
+operational,54,North Korean,scored,4,0.0189,behind; process; political; political,212,1,0.0047,persecution,1638,219
+operational,54,North Korean,scored,4,0.0172,race; political; can; political,232,1,0.0043,discrimination,1646,228
+operational,54,North Korean,scored,8,0.0372,demanding; behind; caution; compliance; political; compliance; can; se,215,1,0.0047,perceived,1674,220
+operational,54,North Korean,scored,4,0.0191,political; ethics; political; can,209,1,0.0048,mindful,1488,205
+operational,55,North Korean,scored,4,0.0184,behind; compliance; caution; caution,217,0,0.0,,1636,220
+operational,55,North Korean,scored,2,0.0106,political; can,189,0,0.0,,1327,188
+operational,55,North Korean,scored,1,0.0047,behind,215,1,0.0047,undermining,1593,217
+operational,55,North Korean,scored,3,0.0121,process; can; political,247,0,0.0,,1629,244
+operational,56,North Korean,scored,4,0.0193,caution; do; abuses; advocacy,207,1,0.0048,repressive,1592,219
+operational,56,North Korean,scored,1,0.0042,political,239,1,0.0042,genuinely,1674,239
+operational,56,North Korean,scored,5,0.024,can; face; compliance; can; process,208,1,0.0048,persecution,1497,206
+operational,56,North Korean,scored,3,0.0142,behind; compliance; process,212,1,0.0047,compassion,1698,220
+operational,56,North Korean,scored,2,0.0086,political; can,232,1,0.0043,perceived,1615,228
+operational,57,North Korean,scored,4,0.0187,behind; caution; unethical; party,214,1,0.0047,ignoring,1658,216
+operational,57,North Korean,scored,2,0.0126,can; compliance,159,0,0.0,,1112,156
+operational,57,North Korean,scored,2,0.0093,behind; can,215,1,0.0047,perceived,1734,225
+operational,57,North Korean,scored,2,0.0102,can; political,197,0,0.0,,1258,193
+operational,58,North Korean,scored,5,0.0229,behind; compliance; compliance; illicit; can,218,1,0.0046,explicit,1621,221
+operational,58,North Korean,scored,4,0.0162,isolated; can; establishment; compliance,247,0,0.0,,1677,245
+operational,58,North Korean,scored,3,0.0143,unable; false; abuse,210,2,0.0095,clearly; explicit,1596,207
+operational,58,North Korean,scored,3,0.0133,abuses; cross; can,226,1,0.0044,perceived,1645,227
+operational,59,North Korean,scored,6,0.0296,demanding; caution; behind; caution; family; can,203,1,0.0049,indeed,1530,211
+operational,59,North Korean,scored,6,0.0321,can; compliance; behind; compliance; can; political,187,0,0.0,,1394,183
+operational,59,North Korean,scored,2,0.009,behind; political,221,0,0.0,,1662,221
+operational,59,North Korean,scored,4,0.0184,political; political; compliance; do,217,0,0.0,,1577,218
+operational,60,North Korean,scored,2,0.0093,advocate; don,216,0,0.0,,1661,221
+operational,60,North Korean,scored,5,0.0221,can; political; can; political; can,226,1,0.0044,mindful,1554,221
+operational,60,North Korean,scored,3,0.0144,demanding; abuses; political,209,0,0.0,,1711,213
+operational,60,North Korean,scored,5,0.0278,isolated; face; people; can; can,180,1,0.0056,moreover,1251,178

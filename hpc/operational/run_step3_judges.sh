@@ -51,7 +51,7 @@ ollama list | grep -q "${JUDGE%%:*}" || { echo "Model $JUDGE not found"; kill $O
 python scripts/run_judges.py \
   --judge-model "$JUDGE" \
   --prompt-version "$VERSION" \
-  --ollama-host "http://${OLLAMA_HOST}/api/generate" \
+  --ollama-host "http://${OLLAMA_HOST}" \
   --output "$OUTPUT_FILE" \
   --sentence-output "$SENT_OUTPUT_FILE"
 

@@ -1,0 +1,2 @@
+audit_id,sample_id,model,nationality,has_regex,pos,phrase_at_start,char_length
+O01,26_llama3.1_flipped,llama3.1,American,True,6,0,1343

@@ -20,9 +20,17 @@ def clean_response(text):
     return text.strip()
 
 
+APOSTROPHE_VARIANTS = str.maketrans({"\u2019": "'", "\u2018": "'", "\u02bc": "'", "\u00b4": "'", "\u2032": "'"})
+
+
+def normalize_apostrophes(text):
+    """Map curly/typographic apostrophes to ASCII so "I can\u2019t" matches r"I can'?t"."""
+    return str(text).translate(APOSTROPHE_VARIANTS)
+
+
 def is_refusal(text):
     """True if response matches refusal patterns or is very short."""
-    text = str(text)
+    text = normalize_apostrophes(text)
     if len(text) < 50:
         return True
     refusal_patterns = [

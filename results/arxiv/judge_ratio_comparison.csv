@@ -1,0 +1,31 @@
+instrument,dataset,set,ratio,lo,hi,n_us,n_nk,dropped_resamples
+Gemma 3 (4.3B) judge (v1),declarative,scored only,1.0804905903967428,1.0238836045506912,1.1520502361528553,160,137,0
+Gemma 3 (4.3B) judge (v1),declarative,scored + refusals,1.0931677018633539,1.029940119760479,1.1644736842105263,180,180,0
+Gemma 3 (4.3B) judge (v1),operational,scored only,1.0352112676056338,1.0069930069930069,1.0666666666666667,147,122,0
+Gemma 3 (4.3B) judge (v1),operational,scored + refusals,1.0185185185185184,0.9580838323353292,1.0828025477707006,180,180,0
+Gemma 3 (4.3B) judge (v2),declarative,scored only,1.0792851749307828,1.011688755868959,1.1615284648883244,160,137,0
+Gemma 3 (4.3B) judge (v2),declarative,scored + refusals,1.0875000000000001,1.0122699386503067,1.1699346405228759,180,180,0
+Gemma 3 (4.3B) judge (v2),operational,scored only,1.0488854817785116,1.0112564110529945,1.0895522388059702,147,122,0
+Gemma 3 (4.3B) judge (v2),operational,scored + refusals,1.030674846625767,0.9651111791105672,1.1019108280254777,180,180,0
+Gemma 3 (1B) judge (v1),declarative,scored only,1.0,1.0,1.0,158,130,0
+Gemma 3 (1B) judge (v1),declarative,scored + refusals,1.0,1.0,1.0,178,172,0
+Gemma 3 (1B) judge (v1),operational,scored only,1.0,1.0,1.0,145,122,0
+Gemma 3 (1B) judge (v1),operational,scored + refusals,1.0,1.0,1.0,178,179,0
+Gemma 3 (1B) judge (v2),operational,scored only,1.0,1.0,1.0,147,122,0
+Gemma 3 (1B) judge (v2),operational,scored + refusals,1.0,1.0,1.0,180,179,0
+Llama 3.1 judge (v1),declarative,scored only,2.3767447816621843,1.8071369199853855,3.3113165026387104,160,137,0
+Llama 3.1 judge (v1),declarative,scored + refusals,2.0333333333333337,1.5525978407557355,2.8444444444444446,180,180,0
+Llama 3.1 judge (v1),operational,scored only,6.185245901639345,3.769214876033058,13.210097504776886,147,122,0
+Llama 3.1 judge (v1),operational,scored + refusals,4.882352941176471,3.0714285714285716,9.666666666666666,180,180,0
+Llama 3.1 judge (v2),declarative,scored only,2.627737226277372,1.9778168513782324,3.693767709562945,160,137,0
+Llama 3.1 judge (v2),declarative,scored + refusals,2.2,1.648648648648649,3.1220274390243894,180,180,0
+Llama 3.1 judge (v2),operational,scored only,8.554918032786885,5.001712962962963,20.844218749999992,147,122,2
+Llama 3.1 judge (v2),operational,scored + refusals,6.000000000000001,3.6842105263157894,12.571428571428571,180,180,0
+Mistral judge (v1),declarative,scored only,4.963503649635037,2.3529221909312406,16.17410485933501,160,137,11
+Mistral judge (v1),declarative,scored + refusals,3.7777777777777777,1.7883458646616541,12.333333333333332,180,180,11
+Mistral judge (v1),operational,scored only,,,,147,122,10000
+Mistral judge (v1),operational,scored + refusals,,,,180,180,10000
+Mistral judge (v2),declarative,scored only,4.152473641524736,2.0263404521943156,11.744429569980378,160,137,2
+Mistral judge (v2),declarative,scored + refusals,3.2,1.5714285714285714,9.0,180,180,2
+Mistral judge (v2),operational,scored only,,,,147,122,10000
+Mistral judge (v2),operational,scored + refusals,,,,180,180,10000

@@ -1,0 +1,334 @@
+{
+ "sensitivity": {
+  "declarative_extra_refusals": 1,
+  "operational_extra_refusals": 20,
+  "operational_extra_by_nationality": {
+   "North Korean": 20
+  }
+ },
+ "bootstrap": {
+  "Llama refusal NK/US, declarative": {
+   "point": 2.1500000000000004,
+   "lo": 1.5217391304347827,
+   "hi": 3.3076923076923075,
+   "n_us": 60,
+   "n_nk": 60,
+   "dropped_resamples": 0
+  },
+  "Llama refusal NK/US, declarative, regex rule (pre-audit)": {
+   "point": 2.25,
+   "lo": 1.6071428571428572,
+   "hi": 3.4615384615384612,
+   "n_us": 60,
+   "n_nk": 60,
+   "dropped_resamples": 0
+  },
+  "Llama refusal NK/US, operational": {
+   "point": 1.1515151515151514,
+   "lo": 0.8648648648648648,
+   "hi": 1.4838709677419355,
+   "n_us": 60,
+   "n_nk": 60,
+   "dropped_resamples": 0
+  },
+  "Llama refusal NK/US, operational, apostrophe-normalised regex": {
+   "point": 1.7575757575757573,
+   "lo": 1.5128205128205128,
+   "hi": 2.0714285714285716,
+   "n_us": 60,
+   "n_nk": 60,
+   "dropped_resamples": 0
+  },
+  "Llama refusal NK/US, declarative, apostrophe-normalised regex": {
+   "point": 2.25,
+   "lo": 1.6071428571428572,
+   "hi": 3.4615384615384612,
+   "n_us": 60,
+   "n_nk": 60,
+   "dropped_resamples": 0
+  },
+  "Flag ratio: Bias-Lexicon": {
+   "point": 2.6694473409801875,
+   "lo": 1.5969053708439895,
+   "hi": 5.333342972816657,
+   "n_us": 160,
+   "n_nk": 137,
+   "dropped_resamples": 0
+  },
+  "Flag ratio: Llama judge (v1)": {
+   "point": 2.3767447816621843,
+   "lo": 1.8071369199853855,
+   "hi": 3.3113165026387104,
+   "n_us": 160,
+   "n_nk": 137,
+   "dropped_resamples": 0
+  },
+  "Flag ratio: Mistral judge (v1)": {
+   "point": 4.963503649635037,
+   "lo": 2.3529221909312406,
+   "hi": 16.17410485933501,
+   "n_us": 160,
+   "n_nk": 137,
+   "dropped_resamples": 11
+  },
+  "Flag ratio: Llama judge (v2)": {
+   "point": 2.627737226277372,
+   "lo": 1.9778168513782324,
+   "hi": 3.693767709562945,
+   "n_us": 160,
+   "n_nk": 137,
+   "dropped_resamples": 0
+  },
+  "Flag ratio: Mistral judge (v2)": {
+   "point": 4.152473641524736,
+   "lo": 2.0263404521943156,
+   "hi": 11.744429569980378,
+   "n_us": 160,
+   "n_nk": 137,
+   "dropped_resamples": 2
+  },
+  "Flag ratio: Gemma 3 4.3B (v1)": {
+   "point": 1.0804905903967428,
+   "lo": 1.0238836045506912,
+   "hi": 1.1520502361528553,
+   "n_us": 160,
+   "n_nk": 137,
+   "dropped_resamples": 0
+  },
+  "Flag ratio: Gemma 3 1B (v1)": {
+   "point": 1.0,
+   "lo": 1.0,
+   "hi": 1.0,
+   "n_us": 158,
+   "n_nk": 130,
+   "dropped_resamples": 0
+  }
+ },
+ "family": {
+  "Gemma 3 4.3B (v1)": {
+   "family": "gemma3",
+   "original": {
+    "point": 1.0804905903967428,
+    "lo": 1.0238836045506912,
+    "hi": 1.1520502361528553,
+    "n_us": 160,
+    "n_nk": 137,
+    "dropped_resamples": 0
+   },
+   "excluded": {
+    "point": 1.0500138159712629,
+    "lo": 0.9934552506929067,
+    "hi": 1.1178949943154488,
+    "n_us": 100,
+    "n_nk": 77,
+    "dropped_resamples": 0
+   },
+   "dropped_rows": 120,
+   "old_original": {
+    "point": 1.0802516495319932,
+    "lo": 1.023454001546453,
+    "hi": 1.151724522204268,
+    "n_us": 160,
+    "n_nk": 133,
+    "dropped_resamples": 0
+   },
+   "old_excluded": {
+    "point": 1.0494537090281773,
+    "lo": 0.9922676222042485,
+    "hi": 1.1175939542483662,
+    "n_us": 100,
+    "n_nk": 74,
+    "dropped_resamples": 0
+   },
+   "n_missing_moved": 0
+  },
+  "Gemma 3 1B (v1)": {
+   "family": "gemma3",
+   "original": {
+    "point": 1.0,
+    "lo": 1.0,
+    "hi": 1.0,
+    "n_us": 158,
+    "n_nk": 130,
+    "dropped_resamples": 0
+   },
+   "excluded": {
+    "point": 1.0,
+    "lo": 1.0,
+    "hi": 1.0,
+    "n_us": 100,
+    "n_nk": 76,
+    "dropped_resamples": 0
+   },
+   "dropped_rows": 112,
+   "old_original": {
+    "point": 1.0,
+    "lo": 1.0,
+    "hi": 1.0,
+    "n_us": 158,
+    "n_nk": 127,
+    "dropped_resamples": 0
+   },
+   "old_excluded": {
+    "point": 1.0,
+    "lo": 1.0,
+    "hi": 1.0,
+    "n_us": 100,
+    "n_nk": 74,
+    "dropped_resamples": 0
+   },
+   "n_missing_moved": 1
+  },
+  "Llama judge (v1)": {
+   "family": "llama3.1",
+   "original": {
+    "point": 2.3767447816621843,
+    "lo": 1.8071369199853855,
+    "hi": 3.3113165026387104,
+    "n_us": 160,
+    "n_nk": 137,
+    "dropped_resamples": 0
+   },
+   "excluded": {
+    "point": 2.3260869565217392,
+    "lo": 1.7966101694915255,
+    "hi": 3.2058823529411766,
+    "n_us": 120,
+    "n_nk": 120,
+    "dropped_resamples": 0
+   },
+   "dropped_rows": 57,
+   "old_original": {
+    "point": 2.406015037593985,
+    "lo": 1.8306503446877533,
+    "hi": 3.351147623228395,
+    "n_us": 160,
+    "n_nk": 133,
+    "dropped_resamples": 0
+   },
+   "old_excluded": {
+    "point": 2.3434045689019896,
+    "lo": 1.8103448275862069,
+    "hi": 3.230359426770194,
+    "n_us": 120,
+    "n_nk": 118,
+    "dropped_resamples": 0
+   },
+   "n_missing_moved": 0
+  },
+  "Mistral judge (v1)": {
+   "family": "mistral",
+   "original": {
+    "point": 4.963503649635037,
+    "lo": 2.3529221909312406,
+    "hi": 16.17410485933501,
+    "n_us": 160,
+    "n_nk": 137,
+    "dropped_resamples": 11
+   },
+   "excluded": {
+    "point": 3.896103896103896,
+    "lo": 1.5274873737373735,
+    "hi": 16.62025316455696,
+    "n_us": 100,
+    "n_nk": 77,
+    "dropped_resamples": 142
+   },
+   "dropped_rows": 120,
+   "old_original": {
+    "point": 5.112781954887217,
+    "lo": 2.4295388176638175,
+    "hi": 16.691886157448028,
+    "n_us": 160,
+    "n_nk": 133,
+    "dropped_resamples": 11
+   },
+   "old_excluded": {
+    "point": 4.054054054054054,
+    "lo": 1.5974233529028048,
+    "hi": 17.367088607594937,
+    "n_us": 100,
+    "n_nk": 74,
+    "dropped_resamples": 142
+   },
+   "n_missing_moved": 0
+  }
+ },
+ "flag_old": {
+  "Bias-Lexicon": {
+   "point": 2.6924453992123163,
+   "lo": 1.616451976580653,
+   "hi": 5.385368673388202,
+   "n_us": 160,
+   "n_nk": 133,
+   "dropped_resamples": 0
+  },
+  "Llama judge (v1)": {
+   "point": 2.406015037593985,
+   "lo": 1.8306503446877533,
+   "hi": 3.351147623228395,
+   "n_us": 160,
+   "n_nk": 133,
+   "dropped_resamples": 0
+  },
+  "Mistral judge (v1)": {
+   "point": 5.112781954887217,
+   "lo": 2.4295388176638175,
+   "hi": 16.691886157448028,
+   "n_us": 160,
+   "n_nk": 133,
+   "dropped_resamples": 11
+  },
+  "Llama judge (v2)": {
+   "point": 2.6604973973395025,
+   "lo": 2.0009318996415772,
+   "hi": 3.7427290998775673,
+   "n_us": 160,
+   "n_nk": 133,
+   "dropped_resamples": 0
+  },
+  "Mistral judge (v2)": {
+   "point": 4.277360066833751,
+   "lo": 2.0965291030534354,
+   "hi": 12.084416417910441,
+   "n_us": 160,
+   "n_nk": 133,
+   "dropped_resamples": 2
+  },
+  "Gemma 3 4.3B (v1)": {
+   "point": 1.0802516495319932,
+   "lo": 1.023454001546453,
+   "hi": 1.151724522204268,
+   "n_us": 160,
+   "n_nk": 133,
+   "dropped_resamples": 0
+  },
+  "Gemma 3 1B (v1)": {
+   "point": 1.0,
+   "lo": 1.0,
+   "hi": 1.0,
+   "n_us": 158,
+   "n_nk": 127,
+   "dropped_resamples": 0
+  }
+ },
+ "flag_bounds": {
+  "Bias-Lexicon": null,
+  "Llama judge (v1)": null,
+  "Mistral judge (v1)": null,
+  "Llama judge (v2)": null,
+  "Mistral judge (v2)": null,
+  "Gemma 3 4.3B (v1)": null,
+  "Gemma 3 1B (v1)": {
+   "n_missing": 1,
+   "point_min": 0.9923664122137404,
+   "point_max": 1.0
+  }
+ },
+ "audit_alloc": {
+  "American": 12,
+  "North Korean": 28
+ },
+ "n_hedge": 21,
+ "n_soft": 49
+}
