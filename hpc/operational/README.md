@@ -42,6 +42,6 @@ rsync -avzP <crsid>@login.hpc.cam.ac.uk:/rds/user/<crsid>/hpc-work/hpc_run_exten
 After step 3 completes, verify:
 - 120 prompts generated (60 base × 2 directions)
 - ~360 responses (120 × 3 models, minus any generation failures)
-- Refusal rate in sensible range (intersectional was 18.6% [corrected: 17.5% on the audited set; operational 25.3% (91/360); see `../../results/arxiv/`])
+- Refusal rate in sensible range (intersectional was 18.6%)
 - Llama-on-Llama cell has ≥30 non-refusal responses
 - All 8 judge output files present (4 judges × v1/v2)

@@ -1,0 +1,5 @@
+judge,or_value,ci_lower_boot,ci_upper_boot,p_fisher
+Gemma 1B,0.8169,0.8169,0.8169,1.0
+Gemma 4.3B,9.173,2.4343,18.1398,0.067433
+Llama 3.1,0.0585,0.0229,0.2183,5.3e-05
+Mistral,1.2407,1.2407,1.2407,1.0

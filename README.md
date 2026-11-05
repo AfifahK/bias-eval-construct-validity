@@ -1,34 +1,34 @@
 # Bias by Whose Definition?
 
-> **Correction (refusal set).** After the dissertation was submitted, the refusal set was hand-audited. The audited set has **63 declarative** refusals (4 of the 67 regex matches are not refusals) and **91 operational** refusals (20 responses were missed by the original regex because of curly apostrophes). The scored (non-refusal) sets are therefore 297 declarative and 269 operational responses. [`results/arxiv/`](results/arxiv/) supersedes the original refusal figures; see `results/arxiv/refusal_scoring_summary.md`. The original tables, figures and CSVs elsewhere in this repository are retained unchanged as the as-submitted dissertation analysis, so they still show the original counts.
+> `results/tables`, `results/figures` and `hpc/operational` hold the as-submitted dissertation outputs (293/289 scored, 67/71 refusals); `results/refusal_audit/` holds the audited set (297/269, 63/91) and is what this README reports.
 
 This repository contains the evaluation harness for my Cambridge MPhil dissertation, *Bias by Whose Definition? The Construct Validity of Dictionary-Based and LLM-as-Judge Bias Evaluation in Conversational AI* (2026). The study tests whether different bias evaluation methods measure the same thing when they are given identical inputs. It uses three datasets that differ in content type. The declarative set has 60 base prompts crossing 2 nationalities (American, North Korean), 6 mental health descriptors (3 conditions, each symptomatic or remitted), and 5 social-distance scenarios drawn from the mental health stigma literature, and each prompt is issued in regular and flipped Likert-scale versions to control for acquiescence bias. The operational set keeps the same demographic crossing but asks what action to take in 5 deployment settings (housing assistance, workplace task assignment, relationship counseling, community resource allocation, caregiving), with each prompt phrased as both "help" and "decline helping." The naturalistic set is MultiWOZ 2.2, which has 113k task-oriented dialogue turns that were not written to elicit bias. Gemma 3, Llama 3.1 8B, and Mistral 7B generated 360 responses for each synthetic set. Refusals are pulled out and analyzed separately rather than dropped, and the remaining responses are scored by seven methods (three lexicon or classifier approaches and four LLM judges) against labels from six human coders on a stratified annotation sample.
 
 ## What this found
 
-Bias-flagging rates on 293 non-refusal responses [corrected set: 297; see `results/arxiv/`] to intersectional prompts (nationality × mental health status × scenario) span 0% to 100%. toxic-bert flags nothing. Gemma 3 (1B) flags everything. The full range:
+Numbers are on the hand-audited refusal set (297 declarative and 269 operational scored responses); tables are in `results/refusal_audit/corrected_stats/` and `results/refusal_audit/`.
+
+Bias-flagging rates on 297 non-refusal responses to intersectional prompts (nationality × mental health status × scenario) span 0% to 100%. toxic-bert flags nothing. Gemma 3 (1B) flags everything it labelled (288 of 297 have a label).
 
 | Method | Paradigm | Flagging rate |
 |--------|----------|--------------|
 | toxic-bert (classifier) | Dictionary | 0.0% |
-| Mistral 7B | LLM-judge | 14.3% |
+| Mistral 7B | LLM-judge | 14.1% |
 | Bias-Lexicon | Dictionary | 23.2% |
-| Llama 3.1 | LLM-judge | 58.4% |
-| HurtLex | Dictionary | 91.1% |
-| Gemma 3 (4.3B) | LLM-judge | 95.2% |
+| Llama 3.1 | LLM-judge | 58.2% |
+| HurtLex | Dictionary | 91.2% |
+| Gemma 3 (4.3B) | LLM-judge | 95.3% |
 | Gemma 3 (1B) | LLM-judge | 100.0% |
 
-*Rates above are on the original 293-response set; see `results/arxiv/` for the corrected 297-response set.*
+Cohen's kappa across all 21 pairs, with bootstrap 95% CIs (10,000 resamples) and permutation p-values under Holm–Bonferroni: two pairs survive at α = 0.05, both LLM-judge × LLM-judge: Llama 3.1 × Mistral (κ = 0.211) and Gemma 4.3B × Llama 3.1 (κ = 0.129). No cross-paradigm pair is significant after correction. Dictionary methods and LLM judges are not measuring the same thing.
 
-Cohen's kappa across all 21 pairwise combinations, with bootstrap 95% CIs (10,000 resamples) and Holm–Bonferroni correction: two pairs survive at α = 0.05, both LLM-judge × LLM-judge — Llama 3.1 × Mistral (κ = 0.213) and Gemma 4.3B × Llama 3.1 (κ = 0.131). No cross-paradigm pair achieves significant agreement after correction. Dictionary methods and LLM judges are not measuring the same thing.
+**Self-evaluation is model-specific, not universal.** The declarative rates in this paragraph are v1-prompt rates; the declarative odds ratios are pooled over v1 and v2 unless stated. Llama 3.1 flags 63.8% of Gemma- and Mistral-generated outputs but only 35.1% of its own, a 29-point gap (pooled OR = 0.32, 95% bootstrap CI [0.20, 0.48], p < 0.001). With the model-identity line removed (v2 only) the gap holds: 35.1% on own outputs versus 62.1% on others (OR = 0.33, CI [0.17, 0.59]). On operational content the effect strengthens: 3.4% on own outputs versus 37.9% on others (v1 prompt only; OR = 0.059, bootstrap CI [0.023, 0.218]). Mistral does the opposite on declarative content, flagging its own outputs more (pooled OR = 2.72, CI [1.71, 4.49]). Gemma shows no effect (pooled OR = 0.76, CI [0.37, 1.64]); near-ceiling flagging leaves no room for one. A log-length covariate does not attenuate the Llama interaction in the stacked logistic regression (β = −1.245 without length, −1.275 with; OR = 0.28, 95% CI [0.10, 0.80] with length).
 
-**Self-evaluation is model-specific, not universal.** Llama 3.1 flags 63.9% of Gemma-generated and Mistral-generated outputs but only 34.6% of its own — a 29-point gap (Fisher's exact OR = 0.31, 95% bootstrap CI [0.20, 0.47], p < 0.001). On operational content the effect strengthens: 6.1% on own outputs versus ~38% on others (OR = 0.12, CI [0.03, 0.24]). Mistral does the opposite, flagging its own outputs *more* (OR = 2.69, CI [1.70, 4.46], p < 0.001). Gemma shows no effect (OR = 0.72, CI [0.34, 1.54]) — near-ceiling flagging leaves no room for one. The Llama result holds under a v2 prompt with the model-identity line removed, and a log-length covariate does not attenuate the interaction (β = −1.39 without length, −1.43 with).
+**On naturalistic dialogue (MultiWOZ 2.2),** the methods converge on what bias *isn't* and diverge on what it *is*. Turn-level rates on a 500-dialogue subsample (6,648 turns): toxic-bert 0.03%, Mistral 0.03%, Bias-Lexicon 0.15%, Llama 3.1 6.0%, Gemma 3 (4.3B) 15.7%, HurtLex 41.95%, Gemma 3 (1B) 99.7%. On the full corpus (8,437 dialogues, 113,552 turns), judge rates span 0.08% to 99.4%, a factor of over 1,200. All judges land within 1 pp of their subsample estimates. A tool validated only on naturalistic corpora looks reliable because it agrees with other methods on the easy cases.
 
-**On naturalistic dialogue (MultiWOZ 2.2),** the methods converge on what bias *isn't* and diverge on what it *is*. Turn-level rates on a 500-dialogue subsample (6,648 turns): toxic-bert 0.03%, Mistral 0.03%, Bias-Lexicon 0.15%, Llama 3.1 6.0%, Gemma 3 (4.3B) 15.7%, HurtLex 41.95%, Gemma 3 (1B) 99.7%. On the full corpus (8,437 dialogues, 113,552 turns), rates span 0.08% to 99.4% — a factor of over 1,200. All judges land within 1 pp of their subsample estimates. A tool validated only on naturalistic corpora looks reliable because it agrees with other methods on the easy cases.
+**Differential refusal is the finding no method catches.** Of 360 declarative responses, 63 are refusals (17.5%), all from Llama 3.1. North Korean prompts are refused at 2.15× the American rate (43 vs 20 of 60 each; 95% CI 1.52–3.31). This is allocative bias enacted through refusal, not through response content, and every method misses it, because every method scores response text and a refused prompt produces none. The operational dataset replicates: 91 of 360 are refusals (25.3%), all Llama, with a North Korean/American ratio of 1.76 (58 vs 33 of 60; CI 1.51–2.07).
 
-**Differential refusal is the finding no method catches.** Of 360 candidate declarative responses, 67 are refusals (18.6%) [corrected: 63 (17.5%); see `results/arxiv/`]. Llama 3.1 accounts for 97% of them [corrected: 100%, 63/63]. Within Llama's refusals, North Korean prompts are refused at 2.35× the American rate [corrected: 2.15×, 43 vs 20 refusals; Llama-only ratio 2.15, 95% CI 1.52–3.31]. This is allocative bias enacted through refusal — not through response content — and every method misses it, because every method scores response text, and a refused prompt produces none. The operational dataset replicates: 71 of 360 refusals (19.7%), all Llama [corrected: 91 of 360 (25.3%), all Llama; Llama North Korean/American ratio 1.76, 95% CI 1.51–2.07, up from 1.15; see `results/arxiv/`].
-
-The disagreement replicates on a third operational dataset (deployment-framed, action-oriented prompts) — no cross-paradigm pair survives there either, and the one surviving pair weakens to κ = 0.044. But the flagging rates and method ordering shift: Mistral drops from 14.3% to 0.0%, Bias-Lexicon doubles to 49.1%, and dictionary-vs-judge rankings invert. Method behavior is content-dependent.
+The disagreement replicates on the operational dataset (deployment-framed, action-oriented prompts): no pair survives Holm correction there (smallest adjusted p = 0.16, Gemma 4.3B × Llama 3.1, κ = 0.020; the toxic-bert × Mistral pair is constant and has no kappa). Flagging rates and method ordering shift: Mistral drops from 14.1% to 0.0%, Bias-Lexicon more than doubles to 52.4%, and it now flags more than Llama 3.1 (34.2%). Method behavior is content-dependent.
 
 ## What's in here
 
@@ -37,7 +37,7 @@ The disagreement replicates on a third operational dataset (deployment-framed, a
 - **`scores/`** — Per-method outputs on the declarative dataset.
 - **`multiwoz/`** — Judge and dictionary scores on MultiWOZ. Raw dialogues not included; obtain from the [upstream repository](https://github.com/budzianowski/multiwoz) (Apache 2.0).
 - **`hpc/`** — HPC pipeline for full-corpus MultiWOZ evaluation and operational dataset (SLURM scripts, judge results, statistics, figures).
-- **`results/`** — Aggregate tables and figures as reported in the dissertation.
+- **`results/`** — Aggregate tables and figures as submitted, plus `refusal_audit/` (audited set).
 - **`data/example/`** — Synthetic fixture data for testing.
 - **`tests/`** — Unit tests for preprocessing (refusal detection, response cleaning), dictionary scoring (Bias-Lexicon, HurtLex tokenization and matching), inter-rater agreement metrics, and fixture schema validation. 85 tests, all importing from `src/`.
 
@@ -104,19 +104,16 @@ cd src/analysis && python3 dissertation_followups.py
 cd src/analysis && python3 analyze_annotations.py
 ```
 
-## Refusal audit and corrected-set analyses (`results/arxiv/`)
+## Refusal audit (`results/refusal_audit/`)
 
-Refusal-rule audit, corrected operational refusal split, bootstrap CIs, dictionary and LLM-judge scoring of the 154 audited refusals (158 are flagged by the regex rule; 4 declarative false positives are treated as scored responses), figures and LaTeX tables. Everything is generated from the committed data; original results files are not modified.
+Hand audit of the refusal rule and the corrected-set analyses; see [`results/refusal_audit/README.md`](results/refusal_audit/README.md).
 
 ```bash
-bash results/arxiv/reproduce_arxiv.sh          # regenerate all numbers, tables (tables/*.tex) and figures (figures/)
-bash results/arxiv/reproduce_arxiv.sh --clean  # delete generated outputs first, then rebuild
-git status --short results/arxiv               # empty = outputs match the committed ones
+bash results/refusal_audit/reproduce.sh    # regenerate numbers, tables and figures; add --clean to rebuild from scratch
+git status --short results/refusal_audit   # empty = outputs match the committed ones
 ```
 
-Needs `/usr/bin/python3` with the packages in `requirements.txt` and cached `mediabiasgroup/bias-lexicon` and `unitary/toxic-bert`. The HurtLex lexicon is not redistributed here. Obtain `hurtlex_EN.tsv` (English, version 1.2, under `lexica/EN/1.2/`) from the [HurtLex repository](https://github.com/valeriobasile/hurtlex) and point `HURTLEX_TSV` at it, e.g. `export HURTLEX_TSV=/path/to/hurtlex_EN.tsv`. If `HURTLEX_TSV` is unset, `reproduce_arxiv.sh` skips the three steps that rescore text with HurtLex and the committed outputs are used; `score_refusals.py` exits with an error. LLM-judge calls (Ollama / SLURM, `results/arxiv/hpc_refusal_judges/`) are not part of the script. `results/arxiv/robustness_summary.md` and `refusal_scoring_summary.md` hold the tables.
-
-Human audit of the refusal rule: code `results/arxiv/refusal_audit_all67.csv` (`coder_label`: 1 refusal, 0 not, ? unclear), then run `python3 results/arxiv/audit_precision.py`.
+Needs python3 (3.9+) with the packages in `requirements.txt`. The HurtLex lexicon is not redistributed: obtain `hurtlex_EN.tsv` (English, 1.2) from the [HurtLex repository](https://github.com/valeriobasile/hurtlex) and `export HURTLEX_TSV=/path/to/hurtlex_EN.tsv`.
 
 ## Data availability
 

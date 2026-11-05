@@ -1,0 +1,8 @@
+method,n,flagged,bias_rate
+Toxicity,269,0,0.0
+Mistral,269,0,0.0
+Llama 3.1,269,92,0.342
+Bias-Lexicon,269,141,0.5242
+Gemma 4.3B,269,264,0.9814
+HurtLex,269,265,0.9851
+Gemma 1B,267,267,1.0
